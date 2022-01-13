@@ -1,27 +1,54 @@
-let Lang: string;
+import FileSystem from 'fs';
 
-function GetLanguage(): string
+enum LanguageMap
 {
-    Lang = (localStorage.Language) ? localStorage.Language : 'en-US';
-
-    return Lang;
+    ENGLISH = 1,
+    PERSIAN = 2
 }
 
-function SetLanguage(ID: number): void
+class Language
 {
-    let Temp = 'en-US';
+    private File: any;
 
-    switch (ID)
+    public Set(ID: LanguageMap): void
     {
-        case 1:
+        let Temp;
+
+        switch (ID)
         {
-            Temp = 'fa-IR';
-            break;
+            case LanguageMap.ENGLISH:
+            {
+                Temp = 'en-US';
+                break;
+            }
+            case LanguageMap.PERSIAN:
+            {
+                Temp = 'fa-IR';
+                break;
+            }
+            default:
+            {
+                return;
+            }
         }
+
+        localStorage.setItem('Language', Temp);
     }
 
-    Lang = Temp;
-    localStorage.setItem('Language', Temp);
+    public Get(): string
+    {
+        return (localStorage.Language) ? localStorage.Language : 'en-US';
+    }
+
+    public Parse(): void
+    {
+        this.File = JSON.parse(FileSystem.readFileSync('./locale/' + this.Get() + '.json', 'utf-8'));
+    }
+
+    public String(Name: string): string
+    {
+        return this.File[Name];
+    }
 }
 
-export default GetLanguage
+export default Language
