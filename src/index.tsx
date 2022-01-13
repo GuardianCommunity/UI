@@ -1,3 +1,4 @@
+import React from 'react';
 import ReactDOM from 'react-dom';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -8,13 +9,14 @@ function App()
 {
     return (
         <>
-            <BrowserRouter>
-                <Routes>
-                    <Route path='/' element={ <Home /> } />
-                </Routes>
-            </BrowserRouter>
-        </>
-    );
+            <React.StrictMode>
+                <BrowserRouter>
+                    <Routes>
+                        <Route path="/" element={ <Home /> } />
+                    </Routes>
+                </BrowserRouter>
+            </React.StrictMode>
+        </>);
 }
 
 ReactDOM.render(<App />, document.getElementById('App'));
