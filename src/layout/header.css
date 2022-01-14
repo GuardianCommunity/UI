@@ -1,0 +1,158 @@
+#Header
+{
+    width: 100%;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#Header > .Menu
+{
+    margin: 0 16px;
+    align-items: center;
+    display: inline-flex;
+}
+
+#Header > .Menu > a
+{
+    padding: 8px;
+    margin: 0 8px;
+    color: #000000;
+    font-size: 16px;
+    transition: 0.3s;
+    border-radius: 3px;
+}
+
+#Header > .Menu > a:hover
+{
+    background: #f0f0f0;
+    color: var(--color-primary);
+}
+
+#Header > .Menu > .Active
+{
+    color: var(--color-primary);
+}
+
+#Header > .Menu > .DropDown
+{
+    padding: 8px;
+    margin: 0 8px;
+    color: #000000;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 800;
+    position: relative;
+}
+
+#Header > .Menu > .DropDown:hover
+{
+    color: var(--color-primary);
+}
+
+#Header > .Menu > .DropDown:hover > .DropDownContent
+{
+    visibility: visible;
+}
+
+#Header > .Menu > .DropDown > .DropDownContent::before
+{
+    top: -8px;
+    content: " ";
+    position: absolute;
+    border-radius: 3px;
+    border-style: solid;
+    right: calc(50% - 10px);
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #f0f0f0 transparent;
+}
+
+#Header > .Menu > .DropDown > .DropDownContent > a
+{
+    color: #000000;
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 10px 16px;
+}
+
+#Header > .Menu > .DropDown > .DropDownContent > a:hover
+{
+    color: var(--color-primary);
+}
+
+#Header > .Option
+{
+    margin: 0 16px;
+    align-items: center;
+    display: inline-flex;
+}
+
+#Header > .Option > .Wallet
+{
+    padding: 8px;
+    color: #ffffff;
+    margin: 0 16px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 3px;
+    background: var(--color-primary);
+}
+
+#Header > .Option > .Wallet:hover
+{
+    background: var(--color-secondary);
+}
+
+#Header > .Option > .Language
+{
+    margin: 0 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+    fill: var(--color-primary);
+}
+
+#Header > .Option > .Language:hover
+{
+    fill: var(--color-secondary);
+}
+
+#Header > .Menu > .DropDown > .DropDownContent,
+#Header > .Option > .Language > .LanguageContent
+{
+    top: 48px;
+    left: 50%;
+    padding: 8px;
+    display: block;
+    transition: 0.3s;
+    border-radius: 3px;
+    position: absolute;
+    visibility: hidden;
+    background: #f0f0f0;
+    transform: translateX(-50%);
+}
+
+#Header > .Option > .Language:hover > .LanguageContent
+{
+    visibility: visible;
+}
+
+#Header > .Option > .Language > .LanguageContent::before
+{
+    top: -8px;
+    content: " ";
+    position: absolute;
+    border-radius: 3px;
+    border-style: solid;
+    right: calc(50% - 10px);
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #f0f0f0 transparent;
+}
+
+.HeaderSeparator
+{
+    height: 1px;
+    background: #00000020;
+}

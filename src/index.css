@@ -1,0 +1,75 @@
+@font-face
+{
+    font-weight: 300;
+    font-display: block;
+    font-family: 'Open Sans';
+    src: url('../public/font/opensans.woff2') format('woff2');
+}
+
+@font-face
+{
+    font-weight: 400;
+    font-display: block;
+    font-family: 'Open Sans';
+    src: url('../public/font/opensans.woff2') format('woff2');
+}
+
+@font-face
+{
+    font-weight: 500;
+    font-display: block;
+    font-family: 'Open Sans';
+    src: url('../public/font/opensans.woff2') format('woff2');
+}
+
+@font-face
+{
+    font-weight: 600;
+    font-display: block;
+    font-family: 'Open Sans';
+    src: url('../public/font/opensans.woff2') format('woff2');
+}
+
+@font-face
+{
+    font-weight: 700;
+    font-display: block;
+    font-family: 'Open Sans';
+    src: url('../public/font/opensans.woff2') format('woff2');
+}
+
+@font-face
+{
+    font-weight: 800;
+    font-display: block;
+    font-family: 'Open Sans';
+    src: url('../public/font/opensans.woff2') format('woff2');
+}
+
+:root
+{
+    --color-secondary: #0371a7;
+    --color-primary: #00aaff;
+}
+
+*,
+*::before,
+*::after
+{
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+body
+{
+    font-size: 100%;
+    font-family: 'Open Sans', serif;
+}
+
+a
+{
+    text-decoration: none;
+}
