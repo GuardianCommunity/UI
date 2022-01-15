@@ -1,10 +1,8 @@
-import Header from '../layout/header';
+import Header from "../layout/header";
 
 const HomePage = () =>
 {
-    return (
-        <Header />
-    );
+    return (<Header />);
 };
 
 export default HomePage;

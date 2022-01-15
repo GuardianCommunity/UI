@@ -1,11 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Home from './page/home';
+import Home from "./page/home";
 
-import './index.css';
+import "./script/Language";
+import "./index.css";
 
 function App()
 {
@@ -19,4 +20,4 @@ function App()
         </React.StrictMode>);
 }
 
-ReactDOM.render(<App />, document.getElementById('App'));
+ReactDOM.render(<App />, document.getElementById("App"));
