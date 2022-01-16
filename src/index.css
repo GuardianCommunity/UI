@@ -1,49 +1,32 @@
 @font-face
 {
-    font-weight: 300;
     font-display: block;
     font-family: "Open Sans";
     src: url("../public/font/opensans.woff2") format("woff2");
+}
+
+@font-face
+{
+    font-weight: 300;
+    font-family: Yekan;
+    font-display: block;
+    src: url("../public/font/yekan_light.woff") format("woff");
 }
 
 @font-face
 {
     font-weight: 400;
+    font-family: Yekan;
     font-display: block;
-    font-family: "Open Sans";
-    src: url("../public/font/opensans.woff2") format("woff2");
+    src: url("../public/font/yekan_regular.woff") format("woff");
 }
 
 @font-face
 {
     font-weight: 500;
+    font-family: Yekan;
     font-display: block;
-    font-family: "Open Sans";
-    src: url("../public/font/opensans.woff2") format("woff2");
-}
-
-@font-face
-{
-    font-weight: 600;
-    font-display: block;
-    font-family: "Open Sans";
-    src: url("../public/font/opensans.woff2") format("woff2");
-}
-
-@font-face
-{
-    font-weight: 700;
-    font-display: block;
-    font-family: "Open Sans";
-    src: url("../public/font/opensans.woff2") format("woff2");
-}
-
-@font-face
-{
-    font-weight: 800;
-    font-display: block;
-    font-family: "Open Sans";
-    src: url("../public/font/opensans.woff2") format("woff2");
+    src: url("../public/font/yekan_bold.woff") format("woff");
 }
 
 :root
@@ -65,8 +48,8 @@
 
 body
 {
-    font-size: 100%;
-    font-family: "Open Sans", serif;
+    font-size: 16px;
+    font-family: "Open Sans", "Yekan", serif;
 }
 
 a

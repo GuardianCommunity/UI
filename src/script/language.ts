@@ -1,9 +1,12 @@
 let Lang = JSON.parse(JSON.stringify(require("../../public/locale/" + (localStorage.Language ?? "en-US") + ".json")));
 
+export function IsRTL(): boolean
+{
+    return localStorage.Language == "fa-IR";
+}
+
 export function SetLanguage(ID: number): void
 {
-    console.log("SetLanguage: " + ID);
-
     let Temp;
 
     switch (ID)
@@ -27,7 +30,8 @@ export function SetLanguage(ID: number): void
     if (localStorage.Language != Temp)
     {
         localStorage.Language = Temp;
-        // TODO Re-render UI
+
+        window.location.reload();
     }
 }
 

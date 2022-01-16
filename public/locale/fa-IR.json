@@ -1,4 +1,11 @@
 {
     "Header.Menu.Home": "خونه",
-    "Header.Menu.Swap": "تبادل"
+    "Header.Menu.Swap": "تبادل",
+    "Header.Menu.Lend": "وام",
+    "Header.Menu.NFT": "NFT",
+    "Header.Menu.Blog": "وبلاگ",
+    "Header.Menu.Roadmap": "نقشه راه",
+    "Header.Menu.Whitepaper": "وایت پیپر",
+
+    "Header.Option.Wallet": "وصل شدن به کیف پول"
 }

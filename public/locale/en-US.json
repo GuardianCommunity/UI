@@ -1,4 +1,11 @@
 {
     "Header.Menu.Home": "Home",
-    "Header.Menu.Swap": "Swap"
+    "Header.Menu.Swap": "Swap",
+    "Header.Menu.Lend": "Lend",
+    "Header.Menu.NFT": "NFT",
+    "Header.Menu.Blog": "Blog",
+    "Header.Menu.Roadmap": "Roadmap",
+    "Header.Menu.Whitepaper": "Whitepaper",
+
+    "Header.Option.Wallet": "CONNECT WALLET"
 }

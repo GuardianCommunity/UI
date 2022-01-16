@@ -1,8 +1,13 @@
 import { Link } from "react-router-dom";
 
-import { SetLanguage, GetString } from "../script/Language";
+import { IsRTL, SetLanguage, GetString } from "../script/language";
 
 import "./header.css";
+
+if (IsRTL())
+{
+    require('./header-rtl.css');
+}
 
 const Header = () =>
 {
@@ -12,15 +17,15 @@ const Header = () =>
 
                 <div className="Menu">
                     <Link to="#" className="Active">{ GetString("Header.Menu.Home") }</Link>
-                    <Link to="#">Swap</Link>
-                    <Link to="#">Lend</Link>
-                    <Link to="#">NFT</Link>
+                    <Link to="#">{ GetString("Header.Menu.Swap") }</Link>
+                    <Link to="#">{ GetString("Header.Menu.Lend") }</Link>
+                    <Link to="#">{ GetString("Header.Menu.NFT") }</Link>
                     <span className="SubMenu">
                         ...
                         <div className="Content">
-                            <Link to="#">Blog</Link>
-                            <Link to="#">Roadmap</Link>
-                            <Link to="#">Whitepaper</Link>
+                            <Link to="#">{ GetString("Header.Menu.Blog") }</Link>
+                            <Link to="#">{ GetString("Header.Menu.Roadmap") }</Link>
+                            <Link to="#">{ GetString("Header.Menu.Whitepaper") }</Link>
                         </div>
                     </span>
                 </div>
@@ -36,10 +41,11 @@ const Header = () =>
                             <div onClick={ () => SetLanguage(2) }><img src={ "./img/lang_persian.png" } alt="Persian" /><span>Persian</span></div>
                         </div>
                     </div>
-                    <div className="Wallet">CONNECT WALLET</div>
+                    <div className="Wallet">{ GetString("Header.Option.Wallet") }</div>
                 </div>
 
             </header>
+
             <div className="HeaderSeparator" />
         </>);
 };
