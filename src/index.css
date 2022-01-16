@@ -1,32 +1,15 @@
 @font-face
 {
     font-display: block;
-    font-family: "Open Sans";
-    src: url("../public/font/opensans.woff2") format("woff2");
+    font-family: "Roboto";
+    src: url("../public/font/roboto.woff") format("woff");
 }
 
 @font-face
 {
-    font-weight: 300;
-    font-family: Yekan;
     font-display: block;
-    src: url("../public/font/yekan_light.woff") format("woff");
-}
-
-@font-face
-{
-    font-weight: 400;
-    font-family: Yekan;
-    font-display: block;
-    src: url("../public/font/yekan_regular.woff") format("woff");
-}
-
-@font-face
-{
-    font-weight: 500;
-    font-family: Yekan;
-    font-display: block;
-    src: url("../public/font/yekan_bold.woff") format("woff");
+    font-family: "IranSans";
+    src: url("../public/font/iransans.woff") format("woff");
 }
 
 :root
@@ -49,7 +32,7 @@
 body
 {
     font-size: 16px;
-    font-family: "Open Sans", "Yekan", serif;
+    font-family: "Roboto", "IranSans", sans-serif;
 }
 
 a
