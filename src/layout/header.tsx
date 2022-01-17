@@ -55,7 +55,7 @@ export default () =>
 
                     </div>
 
-                    <div className="Wallet">{ IsConnected() ? "TODO" : GetString("Header.Option.Wallet") }</div>
+                    <Link to="/auth" className="Wallet">{ IsConnected() ? "TODO" : GetString("Header.Option.Wallet") }</Link>
 
                 </div>
 
@@ -63,6 +63,5 @@ export default () =>
 
             <div className="HeaderSeparator" />
 
-            <WalletComponent />
         </>);
 }
