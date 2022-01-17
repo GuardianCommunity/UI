@@ -7,5 +7,10 @@
     "Header.Menu.Roadmap": "Roadmap",
     "Header.Menu.Whitepaper": "Whitepaper",
 
-    "Header.Option.Wallet": "CONNECT WALLET"
+    "Header.Option.Wallet": "CONNECT WALLET",
+
+    "Header.Option.Language.English": "English",
+    "Header.Option.Language.Persian": "Persian",
+
+    "Wallet.Header.Title": "Connect Wallet"
 }

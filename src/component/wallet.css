@@ -1,0 +1,42 @@
+#Wallet
+{
+    top: 50%;
+    left: 50%;
+    width: 350px;
+    position: absolute;
+    border-radius: 3px;
+    border: 1px solid #00000020;
+    transform: translate(-50%,-50%);
+}
+
+#Wallet > .Header
+{
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#Wallet > .Header > .Title
+{
+    padding: 8px;
+}
+
+#Wallet > .Header > .Close
+{
+    padding: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 3px;
+}
+
+#Wallet > .Header > .Close:hover
+{
+    background: #f0f0f0;
+    color: var(--color-primary);
+}
+
+#Wallet > .Separator
+{
+    height: 1px;
+    background: #00000020;
+}

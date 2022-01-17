@@ -1,8 +1,6 @@
 import Header from "../layout/header";
 
-const HomePage = () =>
+export default () =>
 {
-    return (<Header />);
-};
-
-export default HomePage;
+    return (<><Header /></>);
+}

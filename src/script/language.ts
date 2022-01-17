@@ -1,4 +1,4 @@
-let Lang = JSON.parse(JSON.stringify(require("../../public/locale/" + (localStorage.Language ?? "en-US") + ".json")));
+const Lang = JSON.parse(JSON.stringify(require("../../public/locale/" + (localStorage.Language ?? "en-US") + ".json")));
 
 export function IsRTL(): boolean
 {

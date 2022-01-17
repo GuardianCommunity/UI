@@ -101,13 +101,13 @@
 
 #Header > .Option > .Wallet
 {
-    padding: 8px;
     color: #ffffff;
     margin: 0 16px;
     font-size: 13px;
     cursor: pointer;
     transition: 0.3s;
     border-radius: 3px;
+    padding: 8px 8px 6px;
     background: var(--color-primary);
 }
 
