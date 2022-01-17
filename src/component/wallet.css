@@ -2,9 +2,9 @@
 {
     top: 50%;
     left: 50%;
-    width: 350px;
     position: absolute;
     border-radius: 3px;
+    background: #ffffff ;
     border: 1px solid #00000020;
     transform: translate(-50%,-50%);
 }
@@ -39,4 +39,29 @@
 {
     height: 1px;
     background: #00000020;
+}
+
+#Wallet > .Grid
+{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+#Wallet > .Grid > .Box
+{
+    padding: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+    margin: 16px 32px;
+    border-radius: 3px;
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+#Wallet > .Grid > .Box:hover
+{
+    background: #f0f0f0;
+    color: var(--color-primary);
 }

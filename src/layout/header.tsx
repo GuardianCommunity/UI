@@ -55,7 +55,7 @@ export default () =>
 
                     </div>
 
-                    <div onClick={ () => console.log('QQ') } className="Wallet">{ IsConnected() ? "TODO" : GetString("Header.Option.Wallet") }</div>
+                    <div className="Wallet">{ IsConnected() ? "TODO" : GetString("Header.Option.Wallet") }</div>
 
                 </div>
 
