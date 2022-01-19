@@ -1,24 +1,19 @@
-const Lang = JSON.parse(JSON.stringify(require("../../public/locale/" + (localStorage.Language ?? "en-US") + ".json")));
-
-export function IsRTL(): boolean
-{
-    return localStorage.Language == "fa-IR";
-}
+const Language = JSON.parse(JSON.stringify(require("../../public/locale/" + (localStorage.Language ?? "en-US") + ".json")));
 
 export function SetLanguage(ID: number): void
 {
-    let Temp;
+    let Result;
 
     switch (ID)
     {
         case 1:
         {
-            Temp = "en-US";
+            Result = "en-US";
             break;
         }
         case 2:
         {
-            Temp = "fa-IR";
+            Result = "fa-IR";
             break;
         }
         default:
@@ -27,15 +22,15 @@ export function SetLanguage(ID: number): void
         }
     }
 
-    if (localStorage.Language != Temp)
-    {
-        localStorage.Language = Temp;
+    if (localStorage.Language == Result)
+        return;
 
-        window.location.reload();
-    }
+    localStorage.Language = Result;
+
+    window.location.reload(); // TODO is this correct way to re-render UI ?
 }
 
 export function GetString(Name: string): string
 {
-    return Lang[Name];
+    return Language[Name];
 }
