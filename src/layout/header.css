@@ -39,7 +39,6 @@
     margin: 0 8px;
     color: #000000;
     transition: 0.3s;
-    font-weight: bold;
     position: relative;
 }
 
@@ -101,19 +100,28 @@
 
 #Header > .Option > .Wallet
 {
-    color: #ffffff;
+    padding: 8px;
     margin: 0 16px;
     font-size: 13px;
     cursor: pointer;
     transition: 0.3s;
     border-radius: 3px;
-    padding: 8px 8px 6px;
-    background: var(--color-primary);
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
 }
 
 #Header > .Option > .Wallet:hover
 {
+    color: #ffffff;
     background: var(--color-secondary);
+    border: 2px solid var(--color-secondary);
+}
+
+#Header > .Option > .Wallet > .Separator
+{
+    height: 100%;
+    display: inline-block;
+    border-left: 3px solid var(--color-secondary);
 }
 
 #Header > .Option > .Language

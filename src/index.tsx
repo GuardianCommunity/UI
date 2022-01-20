@@ -28,3 +28,11 @@ function App()
 }
 
 ReactDOM.render(<App />, document.getElementById("App"));
+
+declare global
+{
+    interface Window
+    {
+        ethereum: any;
+    }
+}
