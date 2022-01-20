@@ -75,7 +75,7 @@
     font-weight: normal;
 }
 
-#Header > .Menu > .SubMenu > .Content::before
+#Header > .Menu > .SubMenu > .Content:before
 {
     top: -8px;
     content: " ";
@@ -147,7 +147,7 @@
     visibility: visible;
 }
 
-#Header > .Option > .Language > .Content::before
+#Header > .Option > .Language > .Content:before
 {
     top: -8px;
     content: " ";

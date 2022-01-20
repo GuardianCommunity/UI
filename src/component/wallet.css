@@ -1,5 +1,15 @@
 #Wallet
 {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #000000C0;
+}
+
+#Wallet > .WalletBox
+{
     top: 50%;
     left: 50%;
     position: absolute;
@@ -9,19 +19,19 @@
     transform: translate(-50%,-50%);
 }
 
-#Wallet > .Header
+#Wallet > .WalletBox > .Header
 {
     padding: 8px;
     display: flex;
     justify-content: space-between;
 }
 
-#Wallet > .Header > .Title
+#Wallet > .WalletBox > .Header > .Title
 {
     padding: 8px;
 }
 
-#Wallet > .Header > .Close
+#Wallet > .WalletBox > .Header > .Close
 {
     padding: 8px;
     cursor: pointer;
@@ -29,25 +39,25 @@
     border-radius: 3px;
 }
 
-#Wallet > .Header > .Close:hover
+#Wallet > .WalletBox > .Header > .Close:hover
 {
     background: #f0f0f0;
     color: var(--color-primary);
 }
 
-#Wallet > .Separator
+#Wallet > .WalletBox > .Separator
 {
     height: 1px;
     background: #00000020;
 }
 
-#Wallet > .Grid
+#Wallet > .WalletBox > .Grid
 {
     display: grid;
     grid-template-columns: auto auto;
 }
 
-#Wallet > .Grid > .Box
+#Wallet > .WalletBox > .Grid > .Box
 {
     padding: 8px;
     cursor: pointer;
@@ -60,7 +70,7 @@
     flex-direction: column;
 }
 
-#Wallet > .Grid > .Box:hover
+#Wallet > .WalletBox > .Grid > .Box:hover
 {
     background: #f0f0f0;
     color: var(--color-primary);

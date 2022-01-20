@@ -1,4 +1,4 @@
 export default () =>
 {
-    return (<div>Home Content</div>);
+    return (<div/>);
 }

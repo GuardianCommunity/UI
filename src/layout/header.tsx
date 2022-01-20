@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
-import { Address as WalletAddress, Connected as WalletConnected } from "../script/wallet";
 import { GetString, SetLanguage } from "../script/language";
+import { Address as WalletAddress, Connected as WalletConnected } from "../script/wallet";
 
 import WalletComponent from "../component/wallet";
 
