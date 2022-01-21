@@ -129,6 +129,7 @@
     margin: 0 16px;
     transition: 0.3s;
     position: relative;
+    display: inline-flex;
     fill: var(--color-primary);
 }
 
@@ -146,6 +147,7 @@
     border-radius: 3px;
     position: absolute;
     visibility: hidden;
+    text-align: center;
     background: #f0f0f0;
     transform: translateX(-50%);
 }
@@ -170,25 +172,12 @@
 #Header > .Option > .Language > .Content > div
 {
     padding: 8px;
-    display: flex;
     cursor: pointer;
-    align-items: center;
 }
 
 #Header > .Option > .Language > .Content > div:hover
 {
     color: var(--color-primary);
-}
-
-#Header > .Option > .Language > .Content > div > img
-{
-    width: 16px;
-    height: 16px;
-}
-
-#Header > .Option > .Language > .Content > div > span
-{
-    padding: 8px;
 }
 
 .HeaderSeparator

@@ -9,12 +9,10 @@
 
     "Header.Option.Wallet": "CONNECT WALLET",
     "Header.Option.Wallet.Network": "WRONG NETWORK",
-
     "Header.Option.Language.English": "English",
-    "Header.Option.Language.Persian": "Persian",
+    "Header.Option.Language.Persian": "فارسی",
 
     "Wallet.Header.Title": "Connect Wallet",
-
     "Wallet.Grid.MetaMask": "MetaMask",
     "Wallet.Grid.TrustWallet": "Trust Wallet",
     "Wallet.Grid.BinanceWallet": "Binance Wallet"

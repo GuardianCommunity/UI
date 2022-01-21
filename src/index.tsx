@@ -21,6 +21,7 @@ function App()
                     <Route path="/" element={ <HomePage /> } />
                     <Route path="/Swap" element={ <HomePage /> } />
                     <Route path="/Lend" element={ <HomePage /> } />
+                    <Route path="/NFT" element={ <HomePage /> } />
                 </Routes>
 
             </BrowserRouter>
