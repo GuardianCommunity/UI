@@ -117,11 +117,35 @@
     border: 2px solid var(--color-secondary);
 }
 
-#Header > .Option > .Wallet > .Separator
+#Header > .Option > .WalletConnect
 {
-    height: 100%;
-    display: inline-block;
-    border-left: 3px solid var(--color-secondary);
+    margin: 0 16px;
+    font-size: 13px;
+    color: var(--color-primary);
+}
+
+#Header > .Option > .WalletConnect > .Address
+{
+    padding: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 3px 0 0 3px;
+    border: 2px solid var(--color-primary);
+}
+
+#Header > .Option > .WalletConnect > .Address:hover
+{
+    color: #ffffff;
+    background: var(--color-primary);
+}
+
+#Header > .Option > .WalletConnect > .Network
+{
+    padding: 8px;
+    color: #ffffff;
+    border-radius: 0 3px 3px 0;
+    background: var(--color-primary);
+    border: 2px solid var(--color-primary);
 }
 
 #Header > .Option > .Language
