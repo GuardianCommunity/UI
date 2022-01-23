@@ -12,8 +12,11 @@
     "Header.Option.Language.English": "English",
     "Header.Option.Language.Persian": "فارسی",
 
-    "Wallet.Header.Title": "Connect Wallet",
+    "Wallet.Header.Connect": "Connect Wallet",
+    "Wallet.Header.Address": "Connected Address",
     "Wallet.Grid.MetaMask": "MetaMask",
     "Wallet.Grid.TrustWallet": "Trust Wallet",
-    "Wallet.Grid.BinanceWallet": "Binance Wallet"
+    "Wallet.Grid.BinanceWallet": "Binance Wallet",
+    "Wallet.Disconnect": "Disconnect",
+    "Wallet.View": "View On Explore"
 }

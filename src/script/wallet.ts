@@ -82,19 +82,10 @@ export async function Connected(): Promise<any>
 {
     const Status = await WalletMetaMask.Connected();
 
-    let Address, Network;
 
-    if (Status)
-    {
-        Address = WalletMetaMask.Address.substring(0, 6) + "•••" + WalletMetaMask.Address.substring(WalletMetaMask.Address.length - 4);
 
-        Address = Address.toUpperCase();
-        Address = Address.substring(0, 1) + 'x' + Address.substring(2);
 
-        Network = WalletMetaMask.Network == "516" ? "BSC" : null;
-    }
-
-    return { Status: Status, Address: Address, Network: Network };
+    return { Status: Status, Address: WalletMetaMask.Address, Network: WalletMetaMask.Network };
 }
 
 export default { Connected }

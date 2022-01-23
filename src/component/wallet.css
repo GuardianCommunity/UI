@@ -75,3 +75,30 @@
     background: #f0f0f0;
     color: var(--color-primary);
 }
+
+#Wallet > .WalletBox > .Address
+{
+    padding: 8px;
+    margin: 16px;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 1px solid #00000020;
+}
+
+#Wallet > .WalletBox > .Box
+{
+    margin: 16px;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+
+#Wallet > .WalletBox > .Box > span
+{
+    padding: 8px;
+    color: #ffffff;
+    cursor: pointer;
+    flex-basis: 150px;
+    border-radius: 3px;
+    background: var(--color-primary);
+}

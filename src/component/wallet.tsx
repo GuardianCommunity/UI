@@ -1,11 +1,56 @@
+import React from "react";
 import ReactDOM from "react-dom";
 
-import { Connect as WalletConnect } from "../script/wallet";
+import WalletScript from "../script/wallet";
+
 import { GetString } from "../script/language";
 
 import "./wallet.css";
 
-function WalletComponent()
+function ComponentDisconnect()
+{
+    const [ WalletAddress, SetWalletAddress ]: any = React.useState(null);
+
+    React.useEffect(() =>
+    {
+        WalletScript.Connected().then((Result) =>
+        {
+            if (Result.Status)
+            {
+                SetWalletAddress(Result.Address);
+            }
+        });
+    });
+
+    const Close = () =>
+    {
+        document.getElementById("Wallet")?.remove();
+    };
+
+    return (
+        <div className="WalletBox">
+            <div className="Header">
+                <span className="Title">{ GetString("Wallet.Header.Connect") }</span>
+                <span onClick={ () => Close() } className="Close">&#10006;</span>
+            </div>
+            <div className="Separator" />
+            <div className="Address">{ WalletAddress ?? "-" }</div>
+            <div className="Box">
+                <span >{ GetString("Wallet.View") }</span>
+                <span className="Disconnect">{ GetString("Wallet.Disconnect") }</span>
+            </div>
+        </div>);
+}
+
+function Disconnect()
+{
+    const Result = document.createElement("div");
+    Result.setAttribute("id", "Wallet");
+
+    ReactDOM.render(<ComponentDisconnect />, document.body.appendChild(Result));
+}
+
+function ComponentConnect()
 {
     const Connect = (ID: number) =>
     {
@@ -20,7 +65,7 @@ function WalletComponent()
     return (
         <div className="WalletBox">
             <div className="Header">
-                <span className="Title">{ GetString("Wallet.Header.Title") }</span>
+                <span className="Title">{ GetString("Wallet.Header.Connect") }</span>
                 <span onClick={ () => Close() } className="Close">&#10006;</span>
             </div>
             <div className="Separator" />
@@ -41,20 +86,12 @@ function WalletComponent()
         </div>);
 }
 
-function Address()
+function Connect()
 {
     const Result = document.createElement("div");
     Result.setAttribute("id", "Wallet");
 
-    ReactDOM.render(<WalletComponent />, document.body.appendChild(Result));
+    ReactDOM.render(<ComponentConnect />, document.body.appendChild(Result));
 }
 
-function Wallet()
-{
-    const Result = document.createElement("div");
-    Result.setAttribute("id", "Wallet");
-
-    ReactDOM.render(<WalletComponent />, document.body.appendChild(Result));
-}
-
-export default { Wallet, Address }
+export default { Connect, Disconnect }

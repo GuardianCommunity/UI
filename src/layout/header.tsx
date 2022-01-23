@@ -1,10 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-import { GetString, SetLanguage } from "../script/language";
-
-import WalletComponent from "../component/wallet";
 import Wallet from "../script/wallet";
+import WalletComponent from "../component/wallet";
+
+import { GetString, SetLanguage } from "../script/language";
 
 import "./header.css";
 
@@ -24,6 +24,24 @@ export default () =>
             }
         });
     });
+
+    const GetNetwork = () =>
+    {
+        if (WalletNetwork == "56")
+            return "BSC";
+
+        return GetString("Header.Option.Wallet.Network");
+    };
+
+    const GetAddress = () =>
+    {
+        let Address = WalletAddress.substring(0, 6) + "•••" + WalletAddress.substring(WalletAddress.length - 4);
+
+        Address = Address.toUpperCase();
+        Address = Address.substring(0, 1) + 'x' + Address.substring(2);
+
+        return Address;
+    };
 
     return (
         <>
@@ -53,11 +71,11 @@ export default () =>
                     {
                         WalletAddress ?
                             <div className="WalletConnect">
-                                <span className="Address" onClick={ () => WalletComponent.Address() }>{ WalletAddress }</span>
-                                <span className="Network">{ WalletNetwork ?? GetString("Header.Option.Wallet.Network") }</span>
+                                <span className="Address" onClick={ () => WalletComponent.Disconnect() }>{ GetAddress() }</span>
+                                <span className="Network">{ GetNetwork() }</span>
                             </div>
                             :
-                            <div onClick={ () => WalletComponent.Wallet() } className="Wallet">{ GetString("Header.Option.Wallet") }</div>
+                            <div onClick={ () => WalletComponent.Connect() } className="Wallet">{ GetString("Header.Option.Wallet") }</div>
                     }
                 </div>
             </header>
