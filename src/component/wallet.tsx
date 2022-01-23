@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+import "./wallet.css";
+
 import WalletScript from "../script/wallet";
 
 import { GetString } from "../script/language";
-
-import "./wallet.css";
 
 function ComponentDisconnect()
 {
@@ -13,6 +13,7 @@ function ComponentDisconnect()
 
     React.useEffect(() =>
     {
+        /*
         WalletScript.Connected().then((Result) =>
         {
             if (Result.Status)
@@ -20,6 +21,7 @@ function ComponentDisconnect()
                 SetWalletAddress(Result.Address);
             }
         });
+        */
     });
 
     const Close = () =>
@@ -54,7 +56,9 @@ function ComponentConnect()
 {
     const Connect = (ID: number) =>
     {
+        WalletScript.Request(ID).then(r => { });
 
+        Close();
     };
 
     const Close = () =>

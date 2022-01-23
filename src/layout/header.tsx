@@ -1,12 +1,13 @@
 import React from "react";
+
 import { NavLink } from "react-router-dom";
+
+import "./header.css";
 
 import Wallet from "../script/wallet";
 import WalletComponent from "../component/wallet";
 
 import { GetString, SetLanguage } from "../script/language";
-
-import "./header.css";
 
 export default () =>
 {
@@ -15,6 +16,7 @@ export default () =>
 
     React.useEffect(() =>
     {
+        /*
         Wallet.Connected().then((Result) =>
         {
             if (Result.Status)
@@ -22,7 +24,7 @@ export default () =>
                 SetWalletAddress(Result.Address);
                 SetWalletNetwork(Result.Network);
             }
-        });
+        });*/
     });
 
     const GetNetwork = () =>

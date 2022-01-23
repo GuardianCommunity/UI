@@ -3,11 +3,11 @@ import ReactDOM from "react-dom";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import HeaderLayout from './layout/header';
-import HomePage from "./page/home";
-
-import "./script/language";
 import "./index.css";
+import "./script/language";
+
+import HomePage from "./page/home";
+import HeaderLayout from './layout/header';
 
 function App()
 {

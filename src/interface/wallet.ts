@@ -6,7 +6,9 @@ abstract class Wallet
 
     abstract Connected(): Promise<boolean>;
 
-    abstract Installed(): boolean;
+    abstract IsInstalled(): boolean;
+
+    abstract Connect(): Promise<void>;
 
     abstract Disconnect(): void;
 }

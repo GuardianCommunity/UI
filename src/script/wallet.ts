@@ -1,56 +1,30 @@
-import Wallet from "../interface/wallet";
+import IWallet from "../interface/wallet";
 
 
-export async function Connect(WalletID: number): Promise<number>
+class MetaMask extends IWallet
 {
-    let Result = -1;
-
-    switch (WalletID)
-    {
-        case 1:
-        {
-            if (typeof window.ethereum == 'undefined')
-            {
-                Result = 1;
-                break
-            }
-
-            const Account = await window.ethereum.request({ method: "eth_requestAccounts" });
-
-            console.log('Account: ');
-            console.log(Account[0]);
-
-
-            break;
-        }
-    }
-
-    return Result;
-}
-class MetaMask extends Wallet
-{
-    Network: string;
+    ChainID: string;
     Address: string;
 
     constructor()
     {
         super();
 
-        this.Network = "";
+        this.ChainID = "";
         this.Address = "";
     }
 
     async Connected(): Promise<boolean>
     {
-        const Account = await window.ethereum.request({ method: "eth_accounts" });
-
-        if (Account.length == 0)
-            return false;
-
-        this.Address = Account[0];
-        this.Network = window.ethereum.networkVersion;
 
         return true;
+    }
+
+    Request(): number
+    {
+
+
+        return 0;
     }
 
     Disconnect(): void
@@ -58,34 +32,47 @@ class MetaMask extends Wallet
 
     }
 
-    Installed(): boolean
+    async Connect(): Promise<void>
     {
-        return typeof window.ethereum != 'undefined';
-    }
-
-    Request(): number
-    {
-        window.ethereum.on('accountsChanged', (Account: any) =>
+        try
         {
+            const ChainID = await window.ethereum.request({ method: 'eth_chainId' });
+            const Account = await window.ethereum.request({ method: 'eth_requestAccounts' });
+
+            this.ChainID = ChainID;
             this.Address = Account[0];
-            this.Network = window.ethereum.networkVersion;
 
-        });
+            console.log("Network: " + ChainID);
+            console.log("Address: " + Account[0]);
+        }
+        catch (e)
+        {
+            console.log("E: ");
+            console.log(e);
+        }
+    }
 
-        return 0;
+    IsInstalled(): boolean
+    {
+        if (typeof window.ethereum == 'undefined')
+            return false;
+
+        return window.ethereum.isMetaMask;
     }
 }
 
-const WalletMetaMask = new MetaMask();
-
-export async function Connected(): Promise<any>
+async function Request(ID: number): Promise<void>
 {
-    const Status = await WalletMetaMask.Connected();
+    if (ID == 1)
+    {
+        const WalletMetaMask = new MetaMask();
 
+        if (WalletMetaMask.IsInstalled())
+        {
+            await WalletMetaMask.Connect();
+        }
+    }
 
-
-
-    return { Status: Status, Address: WalletMetaMask.Address, Network: WalletMetaMask.Network };
 }
 
-export default { Connected }
+export default { Request }
