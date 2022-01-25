@@ -1,28 +1,16 @@
-export enum WalletState
+export enum State
 {
     WALLET_METAMASK,
     WALLET_TRUST,
-    WALLET_BINANCE,
-
-    SUCCESS,
-
-    ERROR_INSTALLED,
-    ERROR_REJECT,
-    ERROR_CONNECT
+    WALLET_BINANCE
 }
 
-export abstract class IWallet
+export abstract class Connector
 {
-    protected ChainID: string | undefined;
-    protected Address: string | undefined;
+    ChainID: number | undefined;
+    Address: string | undefined;
 
-    abstract Connect(): Promise<WalletState>;
-
-    abstract IsConnected(): WalletState;
+    abstract Configure(): Promise<boolean>;
 
     abstract IsInstalled(): boolean;
-
-    abstract GetAddress(): string | undefined;
-
-    abstract GetChainID(): string | undefined;
 }

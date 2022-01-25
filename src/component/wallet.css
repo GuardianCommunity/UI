@@ -93,6 +93,7 @@
     justify-content: space-around;
 }
 
+#Wallet > .WalletBox > .Box > a,
 #Wallet > .WalletBox > .Box > span
 {
     padding: 8px;

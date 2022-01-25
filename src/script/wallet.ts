@@ -1,64 +1,16 @@
 import { EventEmitter } from "events";
 
-export enum State
-{
-    WALLET_METAMASK,
-    WALLET_TRUST,
-    WALLET_BINANCE,
+import MetaMask from "./wallet/metamask";
 
-    SUCCESS,
-
-    ERROR_REJECT,
-    ERROR_CONNECT,
-    ERROR_INSTALLED
-}
-
-abstract class Connector
-{
-    ChainID: string | undefined;
-    Address: string | undefined;
-
-    abstract Configure(): Promise<boolean>;
-
-    abstract IsInstalled(): boolean;
-}
-
-class MetaMask extends Connector
-{
-    async Configure()
-    {
-        try
-        {
-            const ChainID = await window.ethereum.request({ method: "eth_chainId" });
-            const Account = await window.ethereum.request({ method: "eth_requestAccounts" });
-
-            this.ChainID = ChainID;
-            this.Address = Account[0];
-        }
-        catch (e)
-        {
-            return false;
-        }
-
-        return true;
-    }
-
-    IsInstalled()
-    {
-        if (typeof window.ethereum == "undefined")
-            return false;
-
-        return window.ethereum.isMetaMask;
-    }
-}
+import { State, Connector } from "../interface/wallet";
 
 class Wallet
 {
-    private ConnectionProvider: Connector | undefined;
-
     private EventMain = new EventEmitter();
 
-    Request(ID: State): void
+    private ConnectionProvider: Connector | undefined;
+
+    Connect(ID: State): void
     {
         if (ID == State.WALLET_METAMASK)
         {
@@ -70,17 +22,23 @@ class Wallet
             this.ConnectionProvider.Configure().then(Result =>
             {
                 if (Result)
-                    this.EventMain.emit("OnConnect");
+                    this.EventMain.emit("OnChange");
             });
         }
     }
 
-    OnConnect(CB: any): void
+    Disconnect(): void
     {
-        this.EventMain.addListener("OnConnect", CB);
+        this.ConnectionProvider = undefined;
+        this.EventMain.emit("OnChange");
     }
 
-    GetChainID(): string | undefined
+    OnChange(CB: any): void
+    {
+        this.EventMain.addListener("OnChange", CB);
+    }
+
+    GetChainID(): number | undefined
     {
         return this.ConnectionProvider?.ChainID;
     }
@@ -90,8 +48,6 @@ class Wallet
         return this.ConnectionProvider?.Address;
     }
 }
-
-console.log("Wallet Created");
 
 export default new Wallet();
 

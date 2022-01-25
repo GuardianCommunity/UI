@@ -1,52 +1,42 @@
-import { WalletState, IWallet } from "../../interface/wallet";
+import { Connector } from "../../interface/wallet";
 
-export default class extends IWallet
+export default class extends Connector
 {
-    async Connect()
+    async Configure()
     {
-        let Result;
-
         try
         {
             const ChainID = await window.ethereum.request({ method: "eth_chainId" });
-            const Account = await window.ethereum.request({ method: "eth_requestAccounts" });
+            const Accounts = await window.ethereum.request({ method: "eth_requestAccounts" });
 
             this.ChainID = ChainID;
-            this.Address = Account[0];
-
-            Result = WalletState.SUCCESS;
+            this.Address = Accounts[0];
         }
         catch (e)
         {
-            Result = WalletState.ERROR_REJECT;
+            return false;
         }
 
-        return Result;
-    }
-
-    IsConnected()
-    {
-        if (this.ChainID && this.Address)
-            return WalletState.SUCCESS;
-
-        return WalletState.ERROR_CONNECT;
+        return true;
     }
 
     IsInstalled()
     {
-        if (typeof window.ethereum == "undefined")
-            return false;
+        if (typeof window.ethereum != "undefined" && window.ethereum.isMetaMask)
+        {
+            window.ethereum.on("accountsChanged", (Accounts: any) =>
+            {
+                this.Address = Accounts[0];
+            });
 
-        return window.ethereum.isMetaMask;
-    }
+            window.ethereum.on("chainChanged", (ChainID: any) =>
+            {
+                this.ChainID = ChainID;
+            });
 
-    GetAddress()
-    {
-        return this.Address;
-    }
+            return true;
+        }
 
-    GetChainID()
-    {
-        return this.ChainID;
+        return false;
     }
 }

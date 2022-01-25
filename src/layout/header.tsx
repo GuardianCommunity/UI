@@ -16,7 +16,7 @@ export default () =>
 
     React.useEffect(() =>
     {
-        WalletScript.OnConnect(() =>
+        WalletScript.OnChange(() =>
         {
             SetWalletAddress(WalletScript.GetAddress());
             SetWalletChainID(WalletScript.GetChainID());

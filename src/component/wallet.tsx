@@ -3,12 +3,31 @@ import ReactDOM from "react-dom";
 
 import "./wallet.css";
 
+import WalletScript from "../script/wallet";
+
 import { GetString } from "../script/language";
 
-import { State as WalletState, default as WalletScript } from "../script/wallet";
+import { State as WalletState } from "../interface/wallet";
 
 function ComponentDisconnect()
 {
+    const Explore = () =>
+    {
+        let Result;
+
+        if (WalletScript.GetChainID() == 56)
+            Result = "https://bscscan.com/address/" + WalletScript.GetAddress();
+
+        return Result;
+    };
+
+    const Disconnect = () =>
+    {
+        WalletScript.Disconnect();
+
+        Close();
+    };
+
     const Close = () =>
     {
         const WalletComponent = document.getElementById("Wallet");
@@ -30,8 +49,8 @@ function ComponentDisconnect()
             <div className="Separator" />
             <div className="Address">{ WalletScript.GetAddress() }</div>
             <div className="Box">
-                <span>{ GetString("Wallet.View") }</span>
-                <span className="Disconnect">{ GetString("Wallet.Disconnect") }</span>
+                <a target="_blank" href={ Explore() }>{ GetString("Wallet.Explore") }</a>
+                <span onClick={ () => Disconnect() } className="Disconnect">{ GetString("Wallet.Disconnect") }</span>
             </div>
         </div>);
 }
@@ -48,7 +67,7 @@ function ComponentConnect()
 {
     const Connect = (ID: WalletState) =>
     {
-        WalletScript.Request(ID);
+        WalletScript.Connect(ID);
 
         Close();
     };
