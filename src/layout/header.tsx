@@ -4,32 +4,28 @@ import { NavLink } from "react-router-dom";
 
 import "./header.css";
 
-import Wallet from "../script/wallet";
+import WalletScript from "../script/wallet";
 import WalletComponent from "../component/wallet";
 
 import { GetString, SetLanguage } from "../script/language";
 
 export default () =>
 {
-    const [ WalletNetwork, SetWalletNetwork ]: any = React.useState(null);
-    const [ WalletAddress, SetWalletAddress ]: any = React.useState(null);
+    const [ WalletChainID, SetWalletChainID ]: any = React.useState(undefined);
+    const [ WalletAddress, SetWalletAddress ]: any = React.useState(undefined);
 
     React.useEffect(() =>
     {
-        /*
-        Wallet.Connected().then((Result) =>
+        WalletScript.OnConnect(() =>
         {
-            if (Result.Status)
-            {
-                SetWalletAddress(Result.Address);
-                SetWalletNetwork(Result.Network);
-            }
-        });*/
+            SetWalletAddress(WalletScript.GetAddress());
+            SetWalletChainID(WalletScript.GetChainID());
+        });
     });
 
     const GetNetwork = () =>
     {
-        if (WalletNetwork == "56")
+        if (WalletChainID == 56)
             return "BSC";
 
         return GetString("Header.Option.Wallet.Network");
@@ -40,7 +36,7 @@ export default () =>
         let Address = WalletAddress.substring(0, 6) + "•••" + WalletAddress.substring(WalletAddress.length - 4);
 
         Address = Address.toUpperCase();
-        Address = Address.substring(0, 1) + 'x' + Address.substring(2);
+        Address = Address.substring(0, 1) + "x" + Address.substring(2);
 
         return Address;
     };

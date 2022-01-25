@@ -1,78 +1,125 @@
-import IWallet from "../interface/wallet";
+import { EventEmitter } from "events";
 
-
-class MetaMask extends IWallet
+export enum State
 {
-    ChainID: string;
-    Address: string;
+    WALLET_METAMASK,
+    WALLET_TRUST,
+    WALLET_BINANCE,
 
-    constructor()
+    SUCCESS,
+
+    ERROR_REJECT,
+    ERROR_CONNECT,
+    ERROR_INSTALLED
+}
+
+abstract class Connector
+{
+    ChainID: string | undefined;
+    Address: string | undefined;
+
+    abstract Configure(): Promise<boolean>;
+
+    abstract IsInstalled(): boolean;
+}
+
+class MetaMask extends Connector
+{
+    async Configure()
     {
-        super();
+        try
+        {
+            const ChainID = await window.ethereum.request({ method: "eth_chainId" });
+            const Account = await window.ethereum.request({ method: "eth_requestAccounts" });
 
-        this.ChainID = "";
-        this.Address = "";
-    }
-
-    async Connected(): Promise<boolean>
-    {
+            this.ChainID = ChainID;
+            this.Address = Account[0];
+        }
+        catch (e)
+        {
+            return false;
+        }
 
         return true;
     }
 
-    Request(): number
+    IsInstalled()
     {
-
-
-        return 0;
-    }
-
-    Disconnect(): void
-    {
-
-    }
-
-    async Connect(): Promise<void>
-    {
-        try
-        {
-            const ChainID = await window.ethereum.request({ method: 'eth_chainId' });
-            const Account = await window.ethereum.request({ method: 'eth_requestAccounts' });
-
-            this.ChainID = ChainID;
-            this.Address = Account[0];
-
-            console.log("Network: " + ChainID);
-            console.log("Address: " + Account[0]);
-        }
-        catch (e)
-        {
-            console.log("E: ");
-            console.log(e);
-        }
-    }
-
-    IsInstalled(): boolean
-    {
-        if (typeof window.ethereum == 'undefined')
+        if (typeof window.ethereum == "undefined")
             return false;
 
         return window.ethereum.isMetaMask;
     }
 }
 
-async function Request(ID: number): Promise<void>
+class Wallet
 {
-    if (ID == 1)
-    {
-        const WalletMetaMask = new MetaMask();
+    private ConnectionProvider: Connector | undefined;
 
-        if (WalletMetaMask.IsInstalled())
+    private EventMain = new EventEmitter();
+
+    Request(ID: State): void
+    {
+        if (ID == State.WALLET_METAMASK)
         {
-            await WalletMetaMask.Connect();
+            this.ConnectionProvider = new MetaMask();
+        }
+
+        if (this.ConnectionProvider && this.ConnectionProvider.IsInstalled())
+        {
+            this.ConnectionProvider.Configure().then(Result =>
+            {
+                if (Result)
+                    this.EventMain.emit("OnConnect");
+            });
         }
     }
 
+    OnConnect(CB: any): void
+    {
+        this.EventMain.addListener("OnConnect", CB);
+    }
+
+    GetChainID(): string | undefined
+    {
+        return this.ConnectionProvider?.ChainID;
+    }
+
+    GetAddress(): string | undefined
+    {
+        return this.ConnectionProvider?.Address;
+    }
 }
 
-export default { Request }
+console.log("Wallet Created");
+
+export default new Wallet();
+
+/*
+
+
+
+
+
+export
+
+let WalletMain: IWallet;
+
+export function WalletConnect(ID: WalletState): IWallet | undefined
+{
+    if (ID == WalletState.WALLET_METAMASK)
+    {
+        WalletMain = new MetaMask();
+
+        return WalletMain;
+    }
+}
+
+export function On(Name: string, CB: any)
+{
+    if (!WalletMain)
+        return;
+
+    WalletMain.On(Name, CB);
+}
+*/
