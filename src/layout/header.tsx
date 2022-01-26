@@ -16,12 +16,19 @@ export default () =>
 
     React.useEffect(() =>
     {
-        WalletScript.OnChange(() =>
+        WalletScript.OnChange(UpdateCallBack);
+
+        return () =>
         {
-            SetWalletAddress(WalletScript.GetAddress());
-            SetWalletChainID(WalletScript.GetChainID());
-        });
+            WalletScript.OnChangeRemove(UpdateCallBack);
+        };
     });
+
+    const UpdateCallBack = () =>
+    {
+        SetWalletAddress(WalletScript.GetAddress());
+        SetWalletChainID(WalletScript.GetChainID());
+    };
 
     const GetNetwork = () =>
     {
@@ -50,10 +57,10 @@ export default () =>
                     <NavLink to="/Lend" className={ ({ isActive }) => (isActive ? "Active" : "") }>{ GetString("Header.Menu.Lend") }</NavLink>
                     <NavLink to="/NFT" className={ ({ isActive }) => (isActive ? "Active" : "") }>{ GetString("Header.Menu.NFT") }</NavLink>
                     <span className="SubMenu">
-                         •••
+                        •••
                         <div className="Content">
                             <NavLink to="#">{ GetString("Header.Menu.Blog") }</NavLink>
-                            <NavLink to="#">{ GetString("Header.Menu.Roadmap") }</NavLink>
+                            <NavLink to="/Roadmap">{ GetString("Header.Menu.Roadmap") }</NavLink>
                             <NavLink to="#">{ GetString("Header.Menu.Whitepaper") }</NavLink>
                         </div>
                     </span>

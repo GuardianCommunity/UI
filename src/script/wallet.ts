@@ -10,32 +10,46 @@ class Wallet
 
     private ConnectionProvider: Connector | undefined;
 
+    constructor()
+    {
+        if (localStorage.WalletID)
+        {
+            this.Connect(localStorage.WalletID);
+        }
+    }
+
     Connect(ID: State): void
     {
         if (ID == State.WALLET_METAMASK)
         {
-            this.ConnectionProvider = new MetaMask();
+            this.ConnectionProvider = new MetaMask(this.EventMain);
         }
 
         if (this.ConnectionProvider && this.ConnectionProvider.IsInstalled())
         {
-            this.ConnectionProvider.Configure().then(Result =>
-            {
-                if (Result)
-                    this.EventMain.emit("OnChange");
-            });
+            localStorage.WalletID = ID;
+
+            this.ConnectionProvider.Configure();
         }
     }
 
     Disconnect(): void
     {
+        localStorage.WalletID = undefined;
+
         this.ConnectionProvider = undefined;
+
         this.EventMain.emit("OnChange");
     }
 
     OnChange(CB: any): void
     {
         this.EventMain.addListener("OnChange", CB);
+    }
+
+    OnChangeRemove(CB: any): void
+    {
+        this.EventMain.removeListener("OnChange", CB);
     }
 
     GetChainID(): number | undefined
@@ -50,32 +64,3 @@ class Wallet
 }
 
 export default new Wallet();
-
-/*
-
-
-
-
-
-export
-
-let WalletMain: IWallet;
-
-export function WalletConnect(ID: WalletState): IWallet | undefined
-{
-    if (ID == WalletState.WALLET_METAMASK)
-    {
-        WalletMain = new MetaMask();
-
-        return WalletMain;
-    }
-}
-
-export function On(Name: string, CB: any)
-{
-    if (!WalletMain)
-        return;
-
-    WalletMain.On(Name, CB);
-}
-*/

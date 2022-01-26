@@ -43,7 +43,7 @@ function ComponentDisconnect()
     return (
         <div className="WalletBox">
             <div className="Header">
-                <span className="Title">{ GetString("Wallet.Header.Connect") }</span>
+                <span className="Title">{ GetString("Wallet.Header.Address") }</span>
                 <span onClick={ () => Close() } className="Close">&#10006;</span>
             </div>
             <div className="Separator" />

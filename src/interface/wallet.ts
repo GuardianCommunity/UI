@@ -10,7 +10,7 @@ export abstract class Connector
     ChainID: number | undefined;
     Address: string | undefined;
 
-    abstract Configure(): Promise<boolean>;
+    abstract Configure(): void;
 
     abstract IsInstalled(): boolean;
 }

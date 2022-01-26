@@ -2,6 +2,15 @@ import { Connector } from "../../interface/wallet";
 
 export default class extends Connector
 {
+    private Emitter: any;
+
+    constructor(Emitter: any)
+    {
+        super();
+
+        this.Emitter = Emitter;
+    }
+
     async Configure()
     {
         try
@@ -11,13 +20,13 @@ export default class extends Connector
 
             this.ChainID = ChainID;
             this.Address = Accounts[0];
+
+            this.Emitter.emit("OnChange");
         }
         catch (e)
         {
-            return false;
-        }
 
-        return true;
+        }
     }
 
     IsInstalled()
@@ -27,11 +36,15 @@ export default class extends Connector
             window.ethereum.on("accountsChanged", (Accounts: any) =>
             {
                 this.Address = Accounts[0];
+
+                this.Emitter.emit("OnChange");
             });
 
             window.ethereum.on("chainChanged", (ChainID: any) =>
             {
                 this.ChainID = ChainID;
+
+                this.Emitter.emit("OnChange");
             });
 
             return true;

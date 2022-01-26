@@ -4,9 +4,9 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./index.css";
-import "./script/language";
 
 import HomePage from "./page/home";
+import LendPage from "./page/lend/lend";
 import HeaderLayout from './layout/header';
 
 function App()
@@ -20,8 +20,9 @@ function App()
                 <Routes>
                     <Route path="/" element={ <HomePage /> } />
                     <Route path="/Swap" element={ <HomePage /> } />
-                    <Route path="/Lend" element={ <HomePage /> } />
+                    <Route path="/Lend" element={ <LendPage /> } />
                     <Route path="/NFT" element={ <HomePage /> } />
+                    <Route path="/Roadmap" element={ <HomePage /> } />
                 </Routes>
 
             </BrowserRouter>
