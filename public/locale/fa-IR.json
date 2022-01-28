@@ -1,0 +1,22 @@
+{
+    "Header.Menu.Home": "صفحه اصلی",
+    "Header.Menu.Swap": "تبادل ارز",
+    "Header.Menu.Lend": "وام دهی",
+    "Header.Menu.NFT": "NFT",
+    "Header.Menu.Blog": "وبلاگ",
+    "Header.Menu.Roadmap": "نقشه راه",
+    "Header.Menu.Whitepaper": "وایت پیپر",
+
+    "Header.Option.Wallet": "اتصال به کیف پول",
+    "Header.Option.Wallet.Network": "شبکه غلط است",
+    "Header.Option.Language.English": "English",
+    "Header.Option.Language.Persian": "فارسی",
+
+    "Wallet.Header.Connect": "اتصال به کیف پول",
+    "Wallet.Header.Address": "آدرس وصل شده",
+    "Wallet.Grid.MetaMask": "MetaMask",
+    "Wallet.Grid.TrustWallet": "Trust Wallet",
+    "Wallet.Grid.BinanceWallet": "Binance Wallet",
+    "Wallet.Disconnect": "قطع کردن کیف پول",
+    "Wallet.Explore": "مشاهده تراکنش"
+}

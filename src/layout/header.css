@@ -1,0 +1,211 @@
+#Header
+{
+    width: 100%;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#Header > .Menu
+{
+    margin: 0 16px;
+    align-items: center;
+    display: inline-flex;
+}
+
+#Header > .Menu > a
+{
+    padding: 8px;
+    margin: 0 8px;
+    color: #000000;
+    transition: 0.3s;
+    border-radius: 3px;
+}
+
+#Header > .Menu > a:hover
+{
+    background: #f0f0f0;
+    color: var(--color-primary);
+}
+
+#Header > .Menu > .Active
+{
+    color: var(--color-primary);
+}
+
+#Header > .Menu > .SubMenu
+{
+    padding: 8px;
+    margin: 0 8px;
+    color: #000000;
+    transition: 0.3s;
+    position: relative;
+}
+
+#Header > .Menu > .SubMenu:hover
+{
+    color: var(--color-primary);
+}
+
+#Header > .Menu > .SubMenu > .Content
+{
+    top: 48px;
+    left: 50%;
+    padding: 8px;
+    transition: 0.3s;
+    border-radius: 3px;
+    position: absolute;
+    visibility: hidden;
+    background: #f0f0f0;
+    transform: translateX(-50%);
+}
+
+#Header > .Menu > .SubMenu:hover > .Content
+{
+    visibility: visible;
+}
+
+#Header > .Menu > .SubMenu > .Content > a
+{
+    color: #000000;
+    display: block;
+    width: max-content;
+    padding: 10px 16px;
+    font-weight: normal;
+}
+
+#Header > .Menu > .SubMenu > .Content:before
+{
+    top: -8px;
+    content: " ";
+    position: absolute;
+    border-radius: 3px;
+    border-style: solid;
+    right: calc(50% - 10px);
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #f0f0f0 transparent;
+}
+
+#Header > .Menu > .SubMenu > .Content > a:hover
+{
+    color: var(--color-primary);
+}
+
+#Header > .Option
+{
+    margin: 0 16px;
+    align-items: center;
+    display: inline-flex;
+}
+
+#Header > .Option > .Wallet
+{
+    padding: 8px;
+    margin: 0 16px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 3px;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+
+#Header > .Option > .Wallet:hover
+{
+    color: #ffffff;
+    background: var(--color-secondary);
+    border: 2px solid var(--color-secondary);
+}
+
+#Header > .Option > .WalletConnect
+{
+    margin: 0 16px;
+    font-size: 13px;
+    color: var(--color-primary);
+}
+
+#Header > .Option > .WalletConnect > .Address
+{
+    padding: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 3px 0 0 3px;
+    border: 2px solid var(--color-primary);
+}
+
+#Header > .Option > .WalletConnect > .Address:hover
+{
+    color: #ffffff;
+    background: var(--color-primary);
+}
+
+#Header > .Option > .WalletConnect > .Network
+{
+    padding: 8px;
+    color: #ffffff;
+    border-radius: 0 3px 3px 0;
+    background: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+
+#Header > .Option > .Language
+{
+    margin: 0 16px;
+    transition: 0.3s;
+    position: relative;
+    display: inline-flex;
+    fill: var(--color-primary);
+}
+
+#Header > .Option > .Language:hover
+{
+    fill: var(--color-secondary);
+}
+
+#Header > .Option > .Language > .Content
+{
+    top: 48px;
+    left: 50%;
+    padding: 8px;
+    transition: 0.3s;
+    border-radius: 3px;
+    position: absolute;
+    visibility: hidden;
+    text-align: center;
+    background: #f0f0f0;
+    transform: translateX(-50%);
+}
+
+#Header > .Option > .Language:hover > .Content
+{
+    visibility: visible;
+}
+
+#Header > .Option > .Language > .Content:before
+{
+    top: -8px;
+    content: " ";
+    position: absolute;
+    border-radius: 3px;
+    border-style: solid;
+    right: calc(50% - 10px);
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #f0f0f0 transparent;
+}
+
+#Header > .Option > .Language > .Content > div
+{
+    padding: 8px;
+    cursor: pointer;
+}
+
+#Header > .Option > .Language > .Content > div:hover
+{
+    color: var(--color-primary);
+}
+
+.HeaderSeparator
+{
+    height: 1px;
+    background: #00000020;
+}
