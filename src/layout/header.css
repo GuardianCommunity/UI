@@ -51,6 +51,7 @@
 {
     top: 48px;
     left: 50%;
+    opacity: 0;
     padding: 8px;
     transition: 0.3s;
     border-radius: 3px;
@@ -62,6 +63,7 @@
 
 #Header > .Menu > .SubMenu:hover > .Content
 {
+    opacity: 1;
     visibility: visible;
 }
 
@@ -166,6 +168,7 @@
 {
     top: 48px;
     left: 50%;
+    opacity: 0;
     padding: 8px;
     transition: 0.3s;
     border-radius: 3px;
@@ -178,6 +181,7 @@
 
 #Header > .Option > .Language:hover > .Content
 {
+    opacity: 1;
     visibility: visible;
 }
 

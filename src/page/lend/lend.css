@@ -1,0 +1,73 @@
+#Lend
+{
+
+}
+
+#Lend > .Item
+{
+    width: 300px;
+    padding: 0 16px;
+    margin: 16px 32px;
+    border-radius: 3px;
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    border: 1px solid #00000020;
+    justify-content: space-between;
+}
+
+#Lend > .Item > .Token
+{
+    column-gap: 8px;
+    font-weight: bold;
+    align-items: center;
+    display: inline-flex;
+}
+
+#Lend > .Item > .Column
+{
+    display: flex;
+    width: inherit;
+    font-size: 14px;
+    padding: 8px 16px;
+    justify-content: space-between;
+}
+
+#Lend > .Item > .Action
+{
+    width: 100%;
+    display: grid;
+    column-gap: 16px;
+    text-align: center;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+}
+
+#Lend > .Item > .Action > .Item
+{
+    padding: 8px;
+    color: #ffffff;
+    margin: 0 0 16px 0;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 3px;
+    background: var(--color-primary);
+}
+
+#Lend > .Item > .Action > .Item:hover
+{
+    transition: 0.3s;
+    background: var(--color-secondary);
+}
+
+#Lend > .Item > .Liquidate
+{
+    width: 100%;
+    height: 32px;
+    margin: 16px 0;
+    font-size: 12px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 3px;
+    background: linear-gradient(270deg, #f0f0f0 30%, var(--color-primary) 0%)
+}

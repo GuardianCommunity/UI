@@ -31,7 +31,7 @@ export default class extends Connector
 
     IsInstalled()
     {
-        if (typeof window.ethereum != "undefined" && window.ethereum.isMetaMask)
+        if (window.ethereum && window.ethereum.isMetaMask)
         {
             window.ethereum.on("accountsChanged", (Accounts: any) =>
             {

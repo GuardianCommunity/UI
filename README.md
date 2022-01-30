@@ -1,9 +1,13 @@
-# Guardian Community UI
-This is the main frontend of the Guardian application.
+# Guardian UI
+This is the main frontend (UI) of the Guardian application.
 
 # Contribute
-Everyone is welcome to contribute on Guardian Community. However, By contributing there is a high chance to receives airdrop
+Everyone is welcome to contribute on this repo. However, By contributing there is a high chance to receives airdrop
 
 # Setup
+Install the latest LTS version of NodeJS 
 
-# Issue
+```
+npm install
+npm start
+```
