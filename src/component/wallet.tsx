@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import "./wallet.css";
+import "./wallet.scss";
 
 import WalletScript from "../script/wallet";
 
@@ -49,7 +49,7 @@ function ComponentDisconnect()
             <div className="Separator" />
             <div className="Address">{ WalletScript.GetAddress() }</div>
             <div className="Box">
-                <a target="_blank" href={ Explore() }>{ GetString("Wallet.Explore") }</a>
+                <span><a target="_blank" href={ Explore() }>{ GetString("Wallet.Explore") }</a></span>
                 <span onClick={ () => Disconnect() } className="Disconnect">{ GetString("Wallet.Disconnect") }</span>
             </div>
         </div>);

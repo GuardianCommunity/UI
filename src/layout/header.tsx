@@ -2,7 +2,7 @@ import React from "react";
 
 import { NavLink } from "react-router-dom";
 
-import "./header.css";
+import "./header.scss";
 
 import WalletScript from "../script/wallet";
 import WalletComponent from "../component/wallet";

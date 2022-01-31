@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import "./index.css";
+import "./index.scss";
 
 import HomePage from "./page/home";
 import LendPage from "./page/lend/lend";

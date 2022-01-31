@@ -1,0 +1,216 @@
+#Header
+{
+    width: 100%;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+
+    > .Menu
+    {
+        margin: 0 16px;
+        align-items: center;
+        display: inline-flex;
+
+        > a
+        {
+            padding: 8px;
+            margin: 0 8px;
+            color: #000000;
+            transition: 0.3s;
+            border-radius: 3px;
+
+            &:hover
+            {
+                background: #f0f0f0;
+                color: var(--color-primary);
+            }
+        }
+
+        > .Active
+        {
+            color: var(--color-primary);
+        }
+
+        > .SubMenu
+        {
+            padding: 8px;
+            margin: 0 8px;
+            color: #000000;
+            transition: 0.3s;
+            position: relative;
+
+            &:hover
+            {
+                color: var(--color-primary);
+
+                > .Content
+                {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+
+            > .Content
+            {
+                top: 48px;
+                left: 50%;
+                opacity: 0;
+                padding: 8px;
+                transition: 0.3s;
+                border-radius: 3px;
+                position: absolute;
+                visibility: hidden;
+                background: #f0f0f0;
+                transform: translateX(-50%);
+
+                > a
+                {
+                    color: #000000;
+                    display: block;
+                    padding: 10px 16px;
+                    width: max-content;
+                    font-weight: normal;
+
+                    &:hover
+                    {
+                        color: var(--color-primary);
+                    }
+                }
+
+                &:before
+                {
+                    top: -8px;
+                    content: " ";
+                    position: absolute;
+                    border-radius: 3px;
+                    border-style: solid;
+                    right: calc(50% - 10px);
+                    border-width: 0 10px 10px 10px;
+                    border-color: transparent transparent #f0f0f0 transparent;
+                }
+            }
+        }
+    }
+
+    > .Option
+    {
+        margin: 0 16px;
+        align-items: center;
+        display: inline-flex;
+
+        > .Wallet
+        {
+            padding: 8px;
+            margin: 0 16px;
+            font-size: 13px;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 3px;
+            color: var(--color-primary);
+            border: 2px solid var(--color-primary);
+
+            &:hover
+            {
+                color: #ffffff;
+                background: var(--color-secondary);
+                border: 2px solid var(--color-secondary);
+            }
+        }
+
+        > .WalletConnect
+        {
+            margin: 0 16px;
+            font-size: 13px;
+            color: var(--color-primary);
+
+            > .Address
+            {
+                padding: 8px;
+                cursor: pointer;
+                transition: 0.3s;
+                border-radius: 3px 0 0 3px;
+                border: 2px solid var(--color-primary);
+
+                &:hover
+                {
+                    color: #ffffff;
+                    background: var(--color-primary);
+                }
+            }
+
+            > .Network
+            {
+                padding: 8px;
+                color: #ffffff;
+                border-radius: 0 3px 3px 0;
+                background: var(--color-primary);
+                border: 2px solid var(--color-primary);
+            }
+        }
+
+        > .Language
+        {
+            margin: 0 16px;
+            transition: 0.3s;
+            position: relative;
+            display: inline-flex;
+            fill: var(--color-primary);
+
+            &:hover
+            {
+                fill: var(--color-secondary);
+
+                > .Content
+                {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+
+            > .Content
+            {
+                top: 48px;
+                left: 50%;
+                opacity: 0;
+                padding: 8px;
+                transition: 0.3s;
+                border-radius: 3px;
+                position: absolute;
+                visibility: hidden;
+                text-align: center;
+                background: #f0f0f0;
+                transform: translateX(-50%);
+
+                &:before
+                {
+                    top: -8px;
+                    content: " ";
+                    position: absolute;
+                    border-radius: 3px;
+                    border-style: solid;
+                    right: calc(50% - 10px);
+                    border-width: 0 10px 10px 10px;
+                    border-color: transparent transparent #f0f0f0 transparent;
+                }
+
+                > div
+                {
+                    padding: 8px;
+                    cursor: pointer;
+                    transition: 0.3s;
+
+                    &:hover
+                    {
+                        color: var(--color-primary);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.HeaderSeparator
+{
+    height: 1px;
+    background: #00000020;
+}
