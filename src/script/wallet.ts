@@ -2,7 +2,7 @@ import { EventEmitter } from "events";
 
 import MetaMask from "./wallet/metamask";
 
-import { State, Connector } from "../interface/wallet";
+import { State, Connector } from "./interface/wallet";
 
 class Wallet
 {

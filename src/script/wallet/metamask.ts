@@ -1,4 +1,4 @@
-import { Connector } from "../../interface/wallet";
+import { Connector } from "../interface/wallet";
 
 export default class extends Connector
 {

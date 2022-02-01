@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./index.scss";
 
-import HomePage from "./page/home";
+import HomePage from "./page/home/home";
 import LendPage from "./page/lend/lend";
 import HeaderLayout from './layout/header';
 
