@@ -1,73 +1,105 @@
-#Lend
+#Lend > .Tab
 {
-
+    left: 50%;
+    padding: 8px;
+    position: relative;
+    display: inline-block;
+    transform: translateX(-50%);
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-left: 1px solid #00000020;
+    border-right: 1px solid #00000020;
+    border-bottom: 1px solid #00000020;
 }
 
-#Lend > .Item
+#Lend > .Tab > span
 {
-    width: 300px;
-    padding: 0 16px;
-    margin: 16px 32px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 8px 16px;
+    text-align: center;
     border-radius: 3px;
-    align-items: center;
-    display: inline-flex;
-    flex-direction: column;
-    border: 1px solid #00000020;
-    justify-content: space-between;
+    display: inline-block;
 }
 
-#Lend > .Item > .Token
+#Lend > .Tab > span:hover
 {
-    column-gap: 8px;
-    font-weight: bold;
-    align-items: center;
-    display: inline-flex;
+    background: #f0f0f0;
+    color: var(--color-primary);
 }
 
-#Lend > .Item > .Column
+#Lend > .Tab > .Active
+{
+    color: var(--color-primary);
+}
+
+#Lend > .Supply
+{
+    margin: 16px;
+    border-radius: 3px;
+    border: 1px solid #00000020;
+}
+
+#Lend > .Supply > .Header
 {
     display: flex;
-    width: inherit;
+    color: #777777;
     font-size: 14px;
-    padding: 8px 16px;
-    justify-content: space-between;
+    border-bottom: 1px solid #00000020;
 }
 
-#Lend > .Item > .Action
+#Lend > .Supply > .Header > div
 {
     width: 100%;
-    display: grid;
-    column-gap: 16px;
+    padding: 16px 0;
     text-align: center;
-    grid-auto-columns: 1fr;
-    grid-auto-flow: column;
+    border-right: 1px solid #00000020;
 }
 
-#Lend > .Item > .Action > .Item
+#Lend > .Supply > .Header > div:last-child
 {
-    padding: 8px;
+    border: 0;
+}
+
+#Lend > .Supply > .Box
+{
+    display: flex;
+    font-size: 14px;
+    border-bottom: 1px solid #00000020;
+}
+
+#Lend > .Supply > .Box:last-child
+{
+    border: 0;
+}
+
+#Lend > .Supply > .Box > .Column
+{
+    gap: 8px;
+    width: 100%;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #00000020;
+}
+
+#Lend > .Supply > .Box > .Column:last-child
+{
+    border: 0;
+}
+
+#Lend > .Supply > .Box > .Column > .Action
+{
     color: #ffffff;
-    margin: 0 0 16px 0;
-    font-size: 12px;
     cursor: pointer;
+    transition: 0.3s;
+    padding: 8px 16px;
     border-radius: 3px;
     background: var(--color-primary);
 }
 
-#Lend > .Item > .Action > .Item:hover
+#Lend > .Supply > .Box > .Column > .Action:hover
 {
-    transition: 0.3s;
     background: var(--color-secondary);
-}
-
-#Lend > .Item > .Liquidate
-{
-    width: 100%;
-    height: 32px;
-    margin: 16px 0;
-    font-size: 12px;
-    line-height: 32px;
-    text-align: center;
-    border-radius: 3px;
-    background: linear-gradient(270deg, #f0f0f0 30%, var(--color-primary) 0%)
 }

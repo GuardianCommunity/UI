@@ -1,0 +1,13 @@
+{
+    "BSC":
+    [
+        {
+            "ID": "BNB",
+            "Contract": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c"
+        },
+        {
+            "ID": "BTCB",
+            "Contract": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c"
+        }
+    ]
+}
