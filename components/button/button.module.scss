@@ -1,0 +1,23 @@
+.button
+{
+    padding: 1rem 1.6rem;
+    border-radius: 2rem;
+    font-size: 1.4rem;
+    border: none;
+    background: none;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+
+    &Primary
+    {
+        color: var(--color-neutral-gray-7);
+        background: var(--color-primary-blue);
+    }
+
+    &Secondary
+    {
+        color: var(--color-neutral-gray-7);
+        border: 1px solid var(--color-neutral-gray-3);
+    }
+}
