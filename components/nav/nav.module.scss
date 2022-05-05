@@ -2,7 +2,8 @@
 {
     height: 8rem;
     padding: 2rem 0;
-
+    position: relative;
+    z-index: 100;
     border-bottom: 1px solid var(--color-neutral-gray-2);
     background: var(--color-neutral-black);
 }
@@ -11,13 +12,14 @@
 {
     display: flex;
     align-items: center;
-
-    position: relative;
+    max-width: 120rem;
+    padding: 0 4rem;
+    margin: 0 auto;
 
     &Toggle
     {
         position: absolute;
-        top: 0.75rem;
+        top: 3rem;
         right: 4rem;
 
         display: none;

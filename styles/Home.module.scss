@@ -1,3 +1,4 @@
+
 .home
 {
     position: relative;
@@ -117,5 +118,46 @@
                 font-weight: 500;
             }
         }
+
+.sectionStart
+{
+    position: relative;
+    padding-top: 70rem;
+    overflow: hidden;
+
+    &Content
+    {
+        position: absolute;
+        top: 17rem;
+        left: 0;
+
+        max-width: 54.5rem;
+
+        & h1
+        {
+            font-size: 6.4rem;
+            line-height: 1;
+            letter-spacing: -.02em;
+            margin-bottom: 2rem;
+            color: var(--color-neutral-gray-7);
+        }
+
+        & p
+        {
+            margin-bottom: 3.2rem;
+            font-size: 1.6rem;
+            line-height: 1.5;
+            color: var(--color-neutral-gray-3);
+        }
+    }
+
+    &BG
+    {
+        position: absolute;
+        top: -14.5rem;
+        right: calc(50% - 75em);
+        width: 924px;
+        height: 913px;
+
     }
 }

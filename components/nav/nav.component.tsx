@@ -3,15 +3,9 @@ import Link from "next/link";
 import Icon from "../icon";
 import Button from "../button/button.component";
 import classnames from 'classnames';
-import {useRef} from "react";
 
 const Nav = () =>
 {
-    const handleOnNavOpen = (event: any) =>
-    {
-
-    }
-
     return (
         <header className={styles.header}>
             <nav className={classnames([styles.nav, 'container'])}>

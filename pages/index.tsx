@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from "next/image";
@@ -7,13 +7,17 @@ import Main from "../components/layouts/main/main.component";
 
 import styles from '../styles/Home.module.scss';
 import Button from "../components/button/button.component";
-=======
+
 import type {NextPage} from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 
 import styles from '../styles/Home.module.scss'
->>>>>>> 8f65f1c (Navbar)
+
+8f65f1c (Navbar)
+
+import Button from "../components/button/button.component";
+7671eb1 (update)
 
 const Home: NextPage = () =>
 {
@@ -23,7 +27,8 @@ const Home: NextPage = () =>
                 <title>Guardian Community</title>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
-<<<<<<< HEAD
+
+
             <Main>
                 <section className={styles.home}>
                     <div className={styles.homeHeaderLeft}>
@@ -130,8 +135,29 @@ const Home: NextPage = () =>
                     </div>
                 </section>
             </Main>
-=======
->>>>>>> 8f65f1c (Navbar)
+
+8f65f1c (Navbar)
+
+
+            <main className="container">
+                <section className={styles.sectionStart}>
+                    <div className={styles.sectionStartContent}>
+                        <h1>Buy & sell <br/> crypto in minutes</h1>
+                        <p>Trade Bitcoin, Ethereum, USDT, and the top altcoins on the legendary crypto asset exchange.</p>
+                        <Button name="Get started now" type="Primary" />
+                    </div>
+
+                    <div className={styles.sectionStartBG}>
+                        <Image
+                            src="/static/cards.png"
+                            alt="Guardian Community"
+                            layout={'fill'}
+                            objectFit={'contain'}
+                        />
+                    </div>
+                </section>
+            </main>
+7671eb1 (update)
         </>
     )
 }
