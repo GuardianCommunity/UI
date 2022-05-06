@@ -1,4 +1,4 @@
-import type {NextPage} from 'next';
+import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import classnames from 'classnames';
@@ -20,8 +20,8 @@ const Home: NextPage = () =>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
 
-            <main className="container">
-                <section className={styles.sectionStart}>
+            <main>
+                <section className={classnames(['container', styles.sectionStart])}>
                     <div className={styles.sectionStartContent}>
                         <h1>Buy & sell <br/> crypto in minutes</h1>
                         <p>Trade Bitcoin, Ethereum, USDT, and the top altcoins on the legendary crypto asset exchange.</p>
@@ -121,7 +121,7 @@ const Home: NextPage = () =>
                     </div>
                 </section>
 
-                <section className={styles.sectionMarket}>
+                <section className={classnames(['container', styles.sectionMarket])}>
                     <div className={styles.sectionMarketHead}>
                         <h2>Market trend</h2>
                         <Button name="View more" />
@@ -292,6 +292,68 @@ const Home: NextPage = () =>
                                 </div>
                             </a>
                         </Link>
+                    </div>
+                </section>
+
+                <section className={styles.sectionTrader}>
+                    <div className="container">
+                        <div className={styles.sectionTraderHeading}>
+                            <h3>Become a crypto trader in seconds</h3>
+                            <p>We have got everything you need to start trading.</p>
+                        </div>
+
+                        <div className={styles.sectionTraderCards}>
+                            <div className={styles.sectionTraderCardsCard}>
+                                <div className={styles.sectionTraderCardsCardIcon}>
+                                    <Image
+                                        src="/static/education.png"
+                                        alt="IQ"
+                                        width={160}
+                                        height={160}
+                                    />
+                                </div>
+
+                                <h4>Buy & Sell Crypto</h4>
+                                <p>We realize ideas from simple to complex, everything becomes easy to use and reach the most potential customers.</p>
+                                <Link href="#">
+                                    <Button name="Buy Crypto" link={true} />
+                                </Link>
+                            </div>
+                            <div className={styles.sectionTraderCardsCard}>
+                                <div className={styles.sectionTraderCardsCardIcon}>
+                                    <Image
+                                        src="/static/card-pic.png"
+                                        alt="IQ"
+                                        width={160}
+                                        height={160}
+                                    />
+                                </div>
+
+                                <h4>Trade Assets</h4>
+                                <p>We realize ideas from simple to complex, everything becomes easy to use and reach the most potential customers.</p>
+                                <Link href="#">
+                                    <Button name="Trade now" link={true} />
+                                </Link>
+                            </div>
+                            <div className={styles.sectionTraderCardsCard}>
+                                <div className={styles.sectionTraderCardsCardIcon}>
+                                    <Image
+                                        src="/static/card-pic-3.png"
+                                        alt="IQ"
+                                        width={160}
+                                        height={160}
+                                    />
+                                </div>
+
+                                <h4>Learn Crypto</h4>
+                                <p>We realize ideas from simple to complex, everything becomes easy to use and reach the most potential customers.</p>
+                                <Link href="#">
+                                    <Button name="Learn now" link={true} />
+                                </Link>
+                            </div>
+                        </div>
+
+                        <Button name="Contact US" type="Primary" />
                     </div>
                 </section>
             </main>
