@@ -24,6 +24,10 @@ const Home: NextPage = () =>
     return (
         <>
             <Head>
+                <meta charSet="UTF-8" />
+                <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport" />
+                <meta content="ie=edge" httpEquiv="X-UA-Compatible" />
+
                 <title>Guardian Community</title>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
@@ -154,6 +158,89 @@ const Home: NextPage = () =>
                             layout={'fill'}
                             objectFit={'contain'}
                         />
+                    </div>
+
+                    <div className={styles.sectionStartCards}>
+                        <div className={styles.sectionStartCard}>
+                            <span className={styles.sectionStartCardIcon}>
+                                <Image
+                                    src="/static/currency/bitcoin.svg"
+                                    alt="Guardian Community"
+                                    width={40}
+                                    height={40}
+                                />
+                            </span>
+
+                            <div className={styles.sectionStartCardDetails}>
+                                <div className={styles.sectionStartCardDetailsInfo}>
+                                    <span className={styles.sectionStartCardDetailsInfoSubTitle}>BTC/USDT</span>
+                                    <span className={styles.sectionStartCardDetailsInfoNegative}>-0.79%</span>
+                                </div>
+
+                                <div className={styles.sectionStartCardDetailsPrice}>36,641.20</div>
+                                <div className={styles.sectionStartCardDetailsMoney}>36,641.20</div>
+                            </div>
+                        </div>
+                        <div className={styles.sectionStartCard}>
+                            <span className={styles.sectionStartCardIcon}>
+                                <Image
+                                    src="/static/currency/chainlink.svg"
+                                    alt="Guardian Community"
+                                    width={40}
+                                    height={40}
+                                />
+                            </span>
+
+                            <div className={styles.sectionStartCardDetails}>
+                                <div className={styles.sectionStartCardDetailsInfo}>
+                                    <span className={styles.sectionStartCardDetailsInfoSubTitle}>BTC/USDT</span>
+                                    <span className={styles.sectionStartCardDetailsInfoPositive}>-0.79%</span>
+                                </div>
+
+                                <div className={styles.sectionStartCardDetailsPrice}>36,641.20</div>
+                                <div className={styles.sectionStartCardDetailsMoney}>36,641.20</div>
+                            </div>
+                        </div>
+                        <div className={styles.sectionStartCard}>
+                            <span className={styles.sectionStartCardIcon}>
+                                <Image
+                                    src="/static/currency/monero.svg"
+                                    alt="Guardian Community"
+                                    width={40}
+                                    height={40}
+                                />
+                            </span>
+
+                            <div className={styles.sectionStartCardDetails}>
+                                <div className={styles.sectionStartCardDetailsInfo}>
+                                    <span className={styles.sectionStartCardDetailsInfoSubTitle}>BTC/USDT</span>
+                                    <span className={styles.sectionStartCardDetailsInfoPositive}>-0.79%</span>
+                                </div>
+
+                                <div className={styles.sectionStartCardDetailsPrice}>36,641.20</div>
+                                <div className={styles.sectionStartCardDetailsMoney}>36,641.20</div>
+                            </div>
+                        </div>
+                        <div className={styles.sectionStartCard}>
+                            <span className={styles.sectionStartCardIcon}>
+                                <Image
+                                    src="/static/currency/maid.svg"
+                                    alt="Guardian Community"
+                                    width={40}
+                                    height={40}
+                                />
+                            </span>
+
+                            <div className={styles.sectionStartCardDetails}>
+                                <div className={styles.sectionStartCardDetailsInfo}>
+                                    <span className={styles.sectionStartCardDetailsInfoSubTitle}>BTC/USDT</span>
+                                    <span className={styles.sectionStartCardDetailsInfoPositive}>-0.79%</span>
+                                </div>
+
+                                <div className={styles.sectionStartCardDetailsPrice}>36,641.20</div>
+                                <div className={styles.sectionStartCardDetailsMoney}>36,641.20</div>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </main>
