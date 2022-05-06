@@ -228,15 +228,6 @@
     "@babel/runtime-corejs3" "^7.10.2"
 
 "array-includes@^3.1.4":
-<<<<<<< HEAD
-  "integrity" "sha512-ZTNSQkmWumEbiHO2GF4GmWxYVTiQyJy2XOTa15sdQSrvKn7l+180egQMqlrMOUMCyLMD7pmyQe4mMDUT6Behrw=="
-  "resolved" "https://registry.npmjs.org/array-includes/-/array-includes-3.1.4.tgz"
-  "version" "3.1.4"
-  dependencies:
-    "call-bind" "^1.0.2"
-    "define-properties" "^1.1.3"
-    "es-abstract" "^1.19.1"
-=======
   "integrity" "sha512-iSDYZMMyTPkiFasVqfuAQnWAYcvO/SeBSCGKePoEthjp4LEMTe4uLc7b025o4jAZpHhihh8xPo99TNWUWWkGDQ=="
   "resolved" "https://registry.npmjs.org/array-includes/-/array-includes-3.1.5.tgz"
   "version" "3.1.5"
@@ -244,7 +235,6 @@
     "call-bind" "^1.0.2"
     "define-properties" "^1.1.4"
     "es-abstract" "^1.19.5"
->>>>>>> 8f65f1c (Navbar)
     "get-intrinsic" "^1.1.1"
     "is-string" "^1.0.7"
 
@@ -327,15 +317,9 @@
   "version" "3.1.0"
 
 "caniuse-lite@^1.0.30001332":
-<<<<<<< HEAD
-  "integrity" "sha512-ddP1Tgm7z2iIxu6QTtbZUv6HJxSaV/PZeSrWFZtbY4JZ69tOeNhBCl3HyRQgeNZKE5AOn1kpV7fhljigy0Ty3w=="
-  "resolved" "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001335.tgz"
-  "version" "1.0.30001335"
-=======
   "integrity" "sha512-/YxSlBmL7iKXTbIJ48IQTnAOBk7XmWsxhBF1PZLOko5Dt9qc4Pl+84lfqG3Tc4EuavurRn1QLoVJGxY2iSycfw=="
   "resolved" "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001336.tgz"
   "version" "1.0.30001336"
->>>>>>> 8f65f1c (Navbar)
 
 "chalk@^4.0.0":
   "integrity" "sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA=="

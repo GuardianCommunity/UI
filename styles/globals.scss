@@ -1,10 +1,7 @@
 :root
 {
     --color-primary-blue: #3772FF;
-
-
     --color-primary-blue-hover: #0045ea;
- 8f65f1c (Navbar)
     --color-primary-purple: #9757D7;
     --color-primary-orange: #FF6838;
     --color-primary-green: #58BD7D;
@@ -30,11 +27,7 @@
 {
     padding: 0;
     margin: 0;
-
-    box-sizing: inherit;
-
     box-sizing: border-box;
- 8f65f1c (Navbar)
 }
 
 html
@@ -44,10 +37,6 @@ html
 
 body
 {
-
-    box-sizing: border-box;
-
- 8f65f1c (Navbar)
     font-family: 'Poppins', sans-serif;
     color: var(--color-neutral-gray-3);
     background: var(--color-neutral-black);
@@ -72,15 +61,7 @@ h1, h2, h3, h4
 
 .container
 {
-
-
-    width: 110rem;
-
-    max-width: 140rem;
-
     max-width: 120rem;
- 7671eb1 (update)
     padding: 0 4rem;
- 8f65f1c (Navbar)
     margin: 0 auto;
 }
