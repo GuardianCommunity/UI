@@ -18,8 +18,13 @@
 # misc
 .DS_Store
 *.pem
+<<<<<<< HEAD
 .vscode
 .idea
+=======
+.idea
+.vscode
+>>>>>>> 8f65f1c (Navbar)
 
 # debug
 npm-debug.log*

@@ -8,16 +8,37 @@
     font-family: 'DM Sans', sans-serif;
     font-weight: 700;
     cursor: pointer;
+<<<<<<< HEAD
+=======
+    transition: background 0.2s;
+>>>>>>> 8f65f1c (Navbar)
 
     &Primary
     {
         color: var(--color-neutral-gray-7);
         background: var(--color-primary-blue);
+<<<<<<< HEAD
+=======
+
+        &:hover
+        {
+            background: var(--color-primary-blue-hover);
+        }
+>>>>>>> 8f65f1c (Navbar)
     }
 
     &Secondary
     {
         color: var(--color-neutral-gray-7);
         border: 1px solid var(--color-neutral-gray-3);
+<<<<<<< HEAD
+=======
+
+        &:hover
+        {
+            color: var(--color-neutral-black);
+            background: var(--color-neutral-gray-7);
+        }
+>>>>>>> 8f65f1c (Navbar)
     }
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from "next/image";
@@ -6,6 +7,13 @@ import Main from "../components/layouts/main/main.component";
 
 import styles from '../styles/Home.module.scss';
 import Button from "../components/button/button.component";
+=======
+import type {NextPage} from 'next';
+import Head from 'next/head';
+import Image from 'next/image';
+
+import styles from '../styles/Home.module.scss'
+>>>>>>> 8f65f1c (Navbar)
 
 const Home: NextPage = () =>
 {
@@ -15,6 +23,7 @@ const Home: NextPage = () =>
                 <title>Guardian Community</title>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
+<<<<<<< HEAD
             <Main>
                 <section className={styles.home}>
                     <div className={styles.homeHeaderLeft}>
@@ -121,6 +130,8 @@ const Home: NextPage = () =>
                     </div>
                 </section>
             </Main>
+=======
+>>>>>>> 8f65f1c (Navbar)
         </>
     )
 }

@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
     "name": "ui",
+=======
+    "name": "guardian",
+>>>>>>> 8f65f1c (Navbar)
     "version": "0.1.0",
     "private": true,
     "scripts": {
