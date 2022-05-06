@@ -11,13 +11,18 @@ import Button from "../components/button/button.component";
 import type {NextPage} from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+import classnames from 'classnames';
 
 import styles from '../styles/Home.module.scss'
 
 8f65f1c (Navbar)
 
 import Button from "../components/button/button.component";
+
 7671eb1 (update)
+
+import Link from "next/link";
+ 3cf4e7c (Market)
 
 const Home: NextPage = () =>
 {
@@ -241,6 +246,180 @@ const Home: NextPage = () =>
                                 <div className={styles.sectionStartCardDetailsMoney}>36,641.20</div>
                             </div>
                         </div>
+                    </div>
+                </section>
+
+                <section className={styles.sectionMarket}>
+                    <div className={styles.sectionMarketHead}>
+                        <h2>Market trend</h2>
+                        <Button name="View more" />
+                    </div>
+
+                    <div className={styles.sectionMarketSort}>
+                        <button className={styles.sectionMarketSortActive}>All</button>
+                        <button>DeFi</button>
+                        <button>Innovation</button>
+                        <button>POS</button>
+                        <button>NFT</button>
+                        <button>POW</button>
+                        <button>Storage</button>
+                    </div>
+
+                    <div className={styles.sectionMarketTable}>
+                        <div className={styles.sectionMarketTableRow}>
+                            <div className={styles.sectionMarketTableRowCol}>#</div>
+                            <div className={styles.sectionMarketTableRowCol}>Name</div>
+                            <div className={styles.sectionMarketTableRowCol}>Price</div>
+                            <div className={styles.sectionMarketTableRowCol}>24h change</div>
+                            <div className={styles.sectionMarketTableRowCol}>Chart</div>
+                            <div className={styles.sectionMarketTableRowCol}>Trade</div>
+                        </div>
+
+                        <Link href="#">
+                            <a className={styles.sectionMarketTableRow}>
+                                <div className={styles.sectionMarketTableRowCol}>1</div>
+                                <div className={styles.sectionMarketTableRowCol}>
+                                    <div className={styles.sectionMarketTableRowColItem}>
+                                        <div className={styles.sectionMarketTableRowColItemIcon}>
+                                            <Image
+                                                src="/static/currency/bitcoin.svg"
+                                                alt="Guardian Community"
+                                                width={40}
+                                                height={40}
+                                            />
+                                        </div>
+                                        <div className={styles.sectionMarketTableRowColItemDetails}>
+                                            <span className={styles.sectionMarketTableRowColItemDetailsSubtitle}>Bitcoin</span>
+                                            <span className={styles.sectionMarketTableRowColItemDetailsCurrency}>BTC</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className={classnames([styles.sectionMarketTableRowCol, styles.sectionMarketTableRowColPrice])}>$36,201.34</div>
+                                <div className={styles.sectionMarketTableRowCol}>
+                                    <span className={styles.sectionMarketTableRowColPositive}>+1.71%</span>
+                                </div>
+                                <div className={styles.sectionMarketTableRowCol}>CHART</div>
+                                <div className={styles.sectionMarketTableRowCol}>
+                                    <Button name="Trade" />
+                                </div>
+                            </a>
+                        </Link>
+                        <Link href="#">
+                            <a className={styles.sectionMarketTableRow}>
+                                <div className={styles.sectionMarketTableRowCol}>2</div>
+                                <div className={styles.sectionMarketTableRowCol}>
+                                    <div className={styles.sectionMarketTableRowColItem}>
+                                        <div className={styles.sectionMarketTableRowColItemIcon}>
+                                            <Image
+                                                src="/static/currency/ethereum.svg"
+                                                alt="Guardian Community"
+                                                width={40}
+                                                height={40}
+                                            />
+                                        </div>
+                                        <div className={styles.sectionMarketTableRowColItemDetails}>
+                                            <span className={styles.sectionMarketTableRowColItemDetailsSubtitle}>Bitcoin</span>
+                                            <span className={styles.sectionMarketTableRowColItemDetailsCurrency}>BTC</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className={classnames([styles.sectionMarketTableRowCol, styles.sectionMarketTableRowColPrice])}>$36,201.34</div>
+                                <div className={styles.sectionMarketTableRowCol}>
+                                    <span className={styles.sectionMarketTableRowColNegative}>+1.71%</span>
+                                </div>
+                                <div className={styles.sectionMarketTableRowCol}>CHART</div>
+                                <div className={styles.sectionMarketTableRowCol}>
+                                    <Button name="Trade" />
+                                </div>
+                            </a>
+                        </Link>
+                        <Link href="#">
+                            <a className={styles.sectionMarketTableRow}>
+                                <div className={styles.sectionMarketTableRowCol}>3</div>
+                                <div className={styles.sectionMarketTableRowCol}>
+                                    <div className={styles.sectionMarketTableRowColItem}>
+                                        <div className={styles.sectionMarketTableRowColItemIcon}>
+                                            <Image
+                                                src="/static/currency/ethereum.svg"
+                                                alt="Guardian Community"
+                                                width={40}
+                                                height={40}
+                                            />
+                                        </div>
+                                        <div className={styles.sectionMarketTableRowColItemDetails}>
+                                            <span className={styles.sectionMarketTableRowColItemDetailsSubtitle}>Bitcoin</span>
+                                            <span className={styles.sectionMarketTableRowColItemDetailsCurrency}>BTC</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className={classnames([styles.sectionMarketTableRowCol, styles.sectionMarketTableRowColPrice])}>$36,201.34</div>
+                                <div className={styles.sectionMarketTableRowCol}>
+                                    <span className={styles.sectionMarketTableRowColNegative}>+1.71%</span>
+                                </div>
+                                <div className={styles.sectionMarketTableRowCol}>CHART</div>
+                                <div className={styles.sectionMarketTableRowCol}>
+                                    <Button name="Trade" />
+                                </div>
+                            </a>
+                        </Link>
+                        <Link href="#">
+                            <a className={styles.sectionMarketTableRow}>
+                                <div className={styles.sectionMarketTableRowCol}>4</div>
+                                <div className={styles.sectionMarketTableRowCol}>
+                                    <div className={styles.sectionMarketTableRowColItem}>
+                                        <div className={styles.sectionMarketTableRowColItemIcon}>
+                                            <Image
+                                                src="/static/currency/ethereum.svg"
+                                                alt="Guardian Community"
+                                                width={40}
+                                                height={40}
+                                            />
+                                        </div>
+                                        <div className={styles.sectionMarketTableRowColItemDetails}>
+                                            <span className={styles.sectionMarketTableRowColItemDetailsSubtitle}>Bitcoin</span>
+                                            <span className={styles.sectionMarketTableRowColItemDetailsCurrency}>BTC</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className={classnames([styles.sectionMarketTableRowCol, styles.sectionMarketTableRowColPrice])}>$36,201.34</div>
+                                <div className={styles.sectionMarketTableRowCol}>
+                                    <span className={styles.sectionMarketTableRowColNegative}>+1.71%</span>
+                                </div>
+                                <div className={styles.sectionMarketTableRowCol}>CHART</div>
+                                <div className={styles.sectionMarketTableRowCol}>
+                                    <Button name="Trade" />
+                                </div>
+                            </a>
+                        </Link>
+                        <Link href="#">
+                            <a className={styles.sectionMarketTableRow}>
+                                <div className={styles.sectionMarketTableRowCol}>5</div>
+                                <div className={styles.sectionMarketTableRowCol}>
+                                    <div className={styles.sectionMarketTableRowColItem}>
+                                        <div className={styles.sectionMarketTableRowColItemIcon}>
+                                            <Image
+                                                src="/static/currency/ethereum.svg"
+                                                alt="Guardian Community"
+                                                width={40}
+                                                height={40}
+                                            />
+                                        </div>
+                                        <div className={styles.sectionMarketTableRowColItemDetails}>
+                                            <span className={styles.sectionMarketTableRowColItemDetailsSubtitle}>Bitcoin</span>
+                                            <span className={styles.sectionMarketTableRowColItemDetailsCurrency}>BTC</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className={classnames([styles.sectionMarketTableRowCol, styles.sectionMarketTableRowColPrice])}>$36,201.34</div>
+                                <div className={styles.sectionMarketTableRowCol}>
+                                    <span className={styles.sectionMarketTableRowColNegative}>+1.71%</span>
+                                </div>
+                                <div className={styles.sectionMarketTableRowCol}>CHART</div>
+                                <div className={styles.sectionMarketTableRowCol}>
+                                    <Button name="Trade" />
+                                </div>
+                            </a>
+                        </Link>
                     </div>
                 </section>
             </main>

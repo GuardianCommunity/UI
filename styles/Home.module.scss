@@ -240,3 +240,141 @@
         }
     }
 }
+
+.sectionMarket
+{
+    padding-top: 12rem;
+
+    &Head
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        margin-bottom: 4rem;
+
+        & h2
+        {
+            font-size: 4.8rem;
+            line-height: 1.16667;
+            letter-spacing: -.02em;
+            color: var(--color-neutral-gray-7);
+        }
+    }
+
+    &Sort
+    {
+        display: flex;
+        align-items: center;
+
+        margin-bottom: 6.4rem;
+
+        & button
+        {
+            padding: 6px 12px;
+            border-radius: 1.4rem;
+            background: none;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.4rem;
+            line-height: 1.14286;
+            font-weight: 700;
+            transition: all .2s;
+            color: var(--color-neutral-gray-3);
+            border: none;
+            cursor: pointer;
+
+            &:hover,
+            &:active
+            {
+                color: var(--color-neutral-gray-7);
+                background: var(--color-neutral-gray-3);
+            }
+        }
+
+        &Active
+        {
+            color: var(--color-neutral-gray-7) !important;
+            background: var(--color-neutral-gray-3) !important;
+        }
+    }
+
+    &Table
+    {
+        display: table;
+        width: 100%;
+
+        &Row
+        {
+            display: table-row;
+
+            &Col
+            {
+                display: table-cell;
+                padding: 2.4rem 1.6rem;
+
+                &Item
+                {
+                    display: flex;
+                    align-items: center;
+
+                    &Icon
+                    {
+                        flex-shrink: 0;
+                        margin-right: 3.2rem;
+                    }
+
+                    &Details
+                    {
+                        &Subtitle
+                        {
+                            color: var(--color-neutral-gray-7);
+                        }
+
+                        &Currency
+                        {
+                            margin-left: 1.2rem;
+                            color: var(--color-neutral-gray-4);
+                        }
+                    }
+                }
+
+                &Price
+                {
+                    color: var(--color-neutral-gray-7);
+                }
+
+                &Positive
+                {
+                    color: var(--color-primary-green);
+                }
+
+                &Negative
+                {
+                    color: var(--color-primary-orange);
+                }
+            }
+
+            &:first-child &Col
+            {
+                font-size: 1.4rem;
+                padding: 2.4rem 1.6rem;
+                border-bottom: 1px solid var(--color-neutral-gray-2);
+                color: var(--color-neutral-gray-3);
+            }
+
+            &:not(:first-child) &Col:first-child
+            {
+                border-radius: 12px 0 0 12px;
+                color: #777E90;
+            }
+
+            &:not(:first-child) &Col
+            {
+                vertical-align: middle;
+                font-size: 1.6rem;
+                line-height: 1.5;
+                font-weight: 500;
+            }
+        }
+    }
+}
