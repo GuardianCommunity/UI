@@ -61,10 +61,6 @@
             background: var(--color-neutral-gray-2);
         }
 
-        &Icon
-        {
-        }
-
         &Details
         {
             margin-top: 1rem;
@@ -331,6 +327,89 @@
                 text-align: center;
                 margin-bottom: 1.6rem;
                 font-size: 1.4rem;
+            }
+        }
+    }
+}
+
+.sectionDownload
+{
+    padding: 12rem 0;
+    background: var(--color-neutral-black);
+    overflow: hidden;
+    height: 90vh;
+
+    position: relative;
+
+    &BG
+    {
+        position: absolute;
+        top: 0;
+        right: calc(50% - 75em);
+        width: 908px;
+        height: 800px;
+        max-width: 100%;
+
+    }
+
+    &Content
+    {
+        h4
+        {
+            font-size: 4.8rem;
+            line-height: 1.16667;
+            letter-spacing: -.02em;
+            color: var(--color-neutral-gray-7);
+        }
+
+        p
+        {
+            margin-bottom: 6.4rem;
+            font-size: 1.6rem;
+            line-height: 1.5;
+            color: var(--color-neutral-gray-3);
+        }
+
+        &Link
+        {
+            display: flex;
+            align-items: center;
+            padding-bottom: 4rem;
+            width: 30%;
+            margin-top: 4rem;
+
+            &:not(:last-child)
+            {
+                border-bottom: 1px solid var(--color-neutral-gray-2);
+            }
+
+            &Icon
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 5.6rem;
+                height: 5.6rem;
+                margin-right: 2.4rem;
+                border-radius: 50%;
+                background: var(--color-neutral-gray-1);
+            }
+
+            &Details
+            {
+                &Content
+                {
+                    color: var(--color-neutral-gray-3);
+                    font-size: 1.4rem;
+                }
+
+                &Subtitle
+                {
+                    font-size: 2.4rem;
+                    line-height: 1.33333;
+                    letter-spacing: -.01em;
+                    color: var(--color-neutral-gray-7);
+                }
             }
         }
     }

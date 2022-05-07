@@ -356,6 +356,73 @@ const Home: NextPage = () =>
                         <Button name="Contact US" type="Primary" />
                     </div>
                 </section>
+
+                <section className={classnames(['container', styles.sectionDownload])}>
+                    <div className={styles.sectionDownloadBG}>
+                        <Image
+                            src="/static/download.png"
+                            alt="Guardian Community"
+                            layout={'fill'}
+                            objectFit={'contain'}
+                        />
+                    </div>
+                    <div className={styles.sectionDownloadContent}>
+                        <h4>Trade anywhere</h4>
+                        <p>Anytime, anywhere. Trade crypto on your terms.</p>
+
+                        <Link href="#">
+                            <a className={styles.sectionDownloadContentLink}>
+                                <div className={styles.sectionDownloadContentLinkIcon}>
+                                    <Image
+                                        src="/static/apple.svg"
+                                        alt="IQ"
+                                        width={24}
+                                        height={24}
+                                    />
+                                </div>
+
+                                <div className={styles.sectionDownloadContentLinkDetails}>
+                                    <div className={styles.sectionDownloadContentLinkDetailsContent}>Download from</div>
+                                    <div className={styles.sectionDownloadContentLinkDetailsSubtitle}>Appstore</div>
+                                </div>
+                            </a>
+                        </Link>
+                        <Link href="#">
+                            <a className={styles.sectionDownloadContentLink}>
+                                <div className={styles.sectionDownloadContentLinkIcon}>
+                                    <Image
+                                        src="/static/play.svg"
+                                        alt="IQ"
+                                        width={24}
+                                        height={24}
+                                    />
+                                </div>
+
+                                <div className={styles.sectionDownloadContentLinkDetails}>
+                                    <div className={styles.sectionDownloadContentLinkDetailsContent}>Download from</div>
+                                    <div className={styles.sectionDownloadContentLinkDetailsSubtitle}>Google Play</div>
+                                </div>
+                            </a>
+                        </Link>
+                        <Link href="#">
+                            <a className={styles.sectionDownloadContentLink}>
+                                <div className={styles.sectionDownloadContentLinkIcon}>
+                                    <Image
+                                        src="/static/apple.svg"
+                                        alt="IQ"
+                                        width={24}
+                                        height={24}
+                                    />
+                                </div>
+
+                                <div className={styles.sectionDownloadContentLinkDetails}>
+                                    <div className={styles.sectionDownloadContentLinkDetailsContent}>Download from</div>
+                                    <div className={styles.sectionDownloadContentLinkDetailsSubtitle}>Mac OS</div>
+                                </div>
+                            </a>
+                        </Link>
+                    </div>
+                </section>
             </main>
         </>
     )
