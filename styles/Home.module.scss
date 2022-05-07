@@ -418,3 +418,104 @@
         }
     }
 }
+
+.sectionNews
+{
+    padding: 5rem 0 12rem 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &Logo
+    {
+        display: flex;
+        align-items: center;
+        font-size: 2.4rem;
+        font-weight: 600;
+        color: var(--color-neutral-gray-6);
+        margin-right: 4rem;
+        margin-bottom: 2rem;
+
+        & span
+        {
+            margin-left: 0.8rem;
+        }
+    }
+
+    & h2
+    {
+        margin-bottom: 2rem;
+        font-size: 4.8rem;
+        line-height: 1.16667;
+        letter-spacing: -.02em;
+        text-align: center;
+        color: var(--color-neutral-gray-7);
+        width: 40%;
+    }
+
+    & p
+    {
+        font-size: 16px;
+        line-height: 1.5;
+        color: var(--color-neutral-gray-3);
+    }
+
+    &Content
+    {
+        display: flex;
+        flex-direction: row-reverse;
+
+        margin-top: 5rem;
+        background: var(--color-neutral-gray-1);
+        width: 97.2rem;
+        padding: 8rem 9.6rem;
+        border-radius: 2.4rem;
+
+        &Icon
+        {
+            flex: 1;
+        }
+
+        &Details
+        {
+            flex: 0 0 50%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            & span
+            {
+                font-size: 1.2rem;
+                margin-bottom: 1.6rem;
+                line-height: 1;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+
+            & h4
+            {
+                margin-bottom: 1.6rem;
+                font-size: 2.4rem;
+                line-height: 1.33333;
+                letter-spacing: -.01em;
+                color: var(--color-neutral-gray-7);
+            }
+
+            & p
+            {
+                font-size: 1.6rem;
+                line-height: 1.5;
+                color: var(--color-neutral-gray-3);
+            }
+
+            & a
+            {
+                margin-top: 4rem;
+                align-self: start;
+            }
+        }
+    }
+}

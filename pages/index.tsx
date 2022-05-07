@@ -2,11 +2,15 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import classnames from 'classnames';
+import Carousel from 'nuka-carousel';
 
 import styles from '../styles/Home.module.scss'
 import Button from "../components/button/button.component";
 import Link from "next/link";
+import { Swiper, SwiperSlide } from 'swiper/react';
 
+// Import Swiper styles
+import 'swiper/css';
 const Home: NextPage = () =>
 {
     return (
@@ -421,6 +425,40 @@ const Home: NextPage = () =>
                                 </div>
                             </a>
                         </Link>
+                    </div>
+                </section>
+
+                <section className={classnames(['container', styles.sectionNews])}>
+                    <div className={styles.sectionNewsLogo}>
+                        <img
+                            src="/static/logo.svg"
+                            alt="Guardian Community"
+                        />
+                        <span>Guardian</span>
+                    </div>
+                    <h2>
+                        Stay in the know on crypto with BitCloud
+                    </h2>
+                    <p>A creative agency that lead and inspire</p>
+
+                    <div className={styles.sectionNewsContent}>
+                        <div className={styles.sectionNewsContentIcon}>
+                            <Image
+                                src="/static/news.png"
+                                alt="IQ"
+                                width={634}
+                                height={633}
+                            />
+                        </div>
+
+                        <div className={styles.sectionNewsContentDetails}>
+                            <span>CRYPTO NEWS</span>
+                            <h4>Be Part of our Global Community</h4>
+                            <p>Let’s stay in touch. Join our communities to keep up with the BitCloud team and our traders from across the world.</p>
+                            <Link href="#">
+                                <Button name="Join now" link={true} />
+                            </Link>
+                        </div>
                     </div>
                 </section>
             </main>
